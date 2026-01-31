@@ -18,6 +18,34 @@
     how_eyebrow: "Metodo in 3 passi",
     how_title: "Come funziona",
     how_subtitle: "Un percorso chiaro: contatto rapido, analisi e soluzione.",
+    services_eyebrow: "Servizi",
+    services_title: "Tutto l'aiuto, in un unico posto",
+    services_subtitle:
+      "Assistenza a domicilio e da remoto, per casa, ufficio e burocrazia digitale.",
+    service_1_title: "Assistenza Tecnologica (Dispositivi & Backup)",
+    service_1_body:
+      "PC, smartphone, tablet, stampanti e rete domestica: configurazione, problemi, ottimizzazioni, migrazione dati e backup.",
+    service_2_title: "Burocrazia Online & Pagamenti (SPID, INPS, PagoPA, Banking)",
+    service_2_body:
+      "Supporto guidato per SPID/CIE, portali della PA, pratiche online, app bancarie e pagamenti (PayPal/carte), accessi e configurazioni.",
+    service_3_title: "Sicurezza Account & Recupero Accessi",
+    service_3_body:
+      "Password sicure, 2FA, password manager, recupero account, messa in sicurezza dopo accessi sospetti e prevenzione truffe.",
+    service_4_title: "Privacy & Sicurezza Avanzata (uso lecito)",
+    service_4_body:
+      "Crittografia di file/backup, setup privacy su dispositivi e browser, riduzione tracciamento e configurazioni orientate alla protezione dei dati.",
+    service_5_title: "Multimedia & Documenti",
+    service_5_body:
+      "PDF, scansioni, conversioni formati, impaginazione base e preparazione file per stampa/archiviazione.",
+    service_6_title: "Video Editing",
+    service_6_body:
+      "Montaggio video (reels/shorts), tagli, sottotitoli, ottimizzazione export e contenuti per attivita locali.",
+    service_7_title: "Siti Web Base",
+    service_7_body:
+      "Siti vetrina (one-page o poche pagine), contatti WhatsApp, mappa, dominio/hosting, aggiornamenti essenziali.",
+    service_8_title: "Lezioni Personalizzate (Adulti & Anziani)",
+    service_8_body:
+      "Lezioni pratiche su computer/tablet/smartphone: WhatsApp, email, foto, file, app utili e sicurezza quotidiana.",
     how_step1_title: "1. Contatto rapido",
     how_step1_body:
       "Mi scrivi su WhatsApp: capisco la richiesta e ti dico tempi e costi.",
@@ -49,6 +77,34 @@
     how_eyebrow: "3-step process",
     how_title: "How it works",
     how_subtitle: "Clear flow: quick contact, analysis, and solution.",
+    services_eyebrow: "Services",
+    services_title: "All the help, in one place",
+    services_subtitle:
+      "On-site and remote help for home, office, and digital paperwork.",
+    service_1_title: "Tech Support (Devices & Backups)",
+    service_1_body:
+      "PC, smartphone, tablet, printers, and home network: setup, troubleshooting, optimization, data migration, and backups.",
+    service_2_title: "Online Services & Payments (SPID, Government Portals, Banking)",
+    service_2_body:
+      "Guided support for digital identity (SPID/CIE), government portals, online procedures, banking apps, and payments (PayPal/cards), access and setup.",
+    service_3_title: "Account Security & Access Recovery",
+    service_3_body:
+      "Strong passwords, 2FA, password managers, account recovery, securing accounts after suspicious access, and scam prevention.",
+    service_4_title: "Privacy & Advanced Security (legal use)",
+    service_4_body:
+      "File/backup encryption, privacy-focused device and browser setup, reduced tracking, and practical data-protection configurations.",
+    service_5_title: "Multimedia & Documents",
+    service_5_body:
+      "PDF work, scanning, format conversion, basic layout, and print/archiving-ready files.",
+    service_6_title: "Video Editing",
+    service_6_body:
+      "Editing for reels/shorts, cuts, subtitles, optimized exports, and content for local businesses.",
+    service_7_title: "Basic Websites",
+    service_7_body:
+      "Simple showcase websites (one-page or a few pages), WhatsApp contact, map, domain/hosting setup, essential updates.",
+    service_8_title: "1-to-1 Training (Adults & Seniors)",
+    service_8_body:
+      "Practical lessons for computer/tablet/smartphone: WhatsApp, email, photos, files, useful apps, and everyday digital safety.",
     how_step1_title: "1. Quick contact",
     how_step1_body:
       "Message me on WhatsApp so I can gauge the request and timing.",

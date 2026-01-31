@@ -68,3 +68,9 @@ Secondary contact: Email (assistenza.tecnologica@proton.me) shown in Contact sec
 ## Decision log
 When a decision is made (e.g., change bilingual strategy), note it briefly here:
 - YYYY-MM-DD: <decision>
+
+## Services
+Services source of truth:
+- content/services.it.md
+- content/services.en.md
+Use these files to build the Services section. Do not invent services.
