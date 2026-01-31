@@ -315,14 +315,14 @@ main {
 
 .panel-list li {
   position: relative;
-  padding-left: 1.4rem;
+  padding-left: 1.3rem;
 }
 
 .panel-list li::before {
   content: "";
   position: absolute;
   left: 0;
-  top: 0.45rem;
+  top: 0.35rem;
   width: 0.6rem;
   height: 0.6rem;
   border-radius: 50%;
