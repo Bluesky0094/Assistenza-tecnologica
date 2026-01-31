@@ -31,7 +31,7 @@
     service_3_title: "Sicurezza Account & Recupero Accessi",
     service_3_body:
       "Password sicure, 2FA, password manager, recupero account, messa in sicurezza dopo accessi sospetti e prevenzione truffe.",
-    service_4_title: "Privacy & Sicurezza Avanzata (uso lecito)",
+    service_4_title: "Privacy & Sicurezza Avanzata",
     service_4_body:
       "Crittografia di file/backup, setup privacy su dispositivi e browser, riduzione tracciamento e configurazioni orientate alla protezione dei dati.",
     service_5_title: "Multimedia & Documenti",
@@ -43,7 +43,7 @@
     service_7_title: "Siti Web Base",
     service_7_body:
       "Siti vetrina (one-page o poche pagine), contatti WhatsApp, mappa, dominio/hosting, aggiornamenti essenziali.",
-    service_8_title: "Lezioni Personalizzate (Adulti & Anziani)",
+    service_8_title: "Lezioni Personalizzate",
     service_8_body:
       "Lezioni pratiche su computer/tablet/smartphone: WhatsApp, email, foto, file, app utili e sicurezza quotidiana.",
     how_step1_title: "1. Contatto rapido",
@@ -90,7 +90,7 @@
     service_3_title: "Account Security & Access Recovery",
     service_3_body:
       "Strong passwords, 2FA, password managers, account recovery, securing accounts after suspicious access, and scam prevention.",
-    service_4_title: "Privacy & Advanced Security (legal use)",
+    service_4_title: "Privacy & Advanced Security",
     service_4_body:
       "File/backup encryption, privacy-focused device and browser setup, reduced tracking, and practical data-protection configurations.",
     service_5_title: "Multimedia & Documents",
@@ -102,7 +102,7 @@
     service_7_title: "Basic Websites",
     service_7_body:
       "Simple showcase websites (one-page or a few pages), WhatsApp contact, map, domain/hosting setup, essential updates.",
-    service_8_title: "1-to-1 Training (Adults & Seniors)",
+    service_8_title: "1-to-1 Training",
     service_8_body:
       "Practical lessons for computer/tablet/smartphone: WhatsApp, email, photos, files, useful apps, and everyday digital safety.",
     how_step1_title: "1. Quick contact",
