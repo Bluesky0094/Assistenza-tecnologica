@@ -1,0 +1,131 @@
+﻿<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Sito servizi bilingue (IT/EN) + strumenti utili client-side" />
+    <title>Assistenza Tecnologica</title>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <script src="assets/js/main.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#hero" data-i18n="skip_link">Vai al contenuto</a>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="#hero" data-i18n="site_title">Assistenza Tecnologica</a>
+        <button
+          class="menu-toggle"
+          id="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="primary-nav"
+        >
+          <span class="menu-icon" aria-hidden="true"><span></span></span>
+          <span class="menu-label" data-i18n="nav_menu">Menu</span>
+        </button>
+        <nav class="site-nav" id="primary-nav" aria-label="Primary">
+          <a class="nav-link" href="#hero" data-i18n="nav_home">Home</a>
+          <button class="nav-link nav-link--disabled" type="button" aria-disabled="true" data-i18n="nav_about">
+            Chi sono
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow" data-i18n="hero_eyebrow">Supporto tecnico e digitale</p>
+            <h1 data-i18n="hero_title">Risolvo problemi tecnologici, senza stress.</h1>
+            <p class="hero-subtitle" data-i18n="hero_subtitle">
+              Interventi rapidi in presenza a Modica e provincia di Ragusa, oppure da remoto ovunque.
+            </p>
+            <div class="hero-actions">
+              <a
+                class="btn btn-primary"
+                data-i18n="hero_cta"
+                data-i18n-attr="href:hero_whatsapp"
+                href="https://wa.me/393514218212?text=Ciao!%20Ho%20visto%20il%20tuo%20sito%20e%20vorrei%20informazioni%20sui%20tuoi%20servizi."
+              >
+                Scrivimi su WhatsApp
+              </a>
+              <span class="cta-note" data-i18n="hero_cta_note">Risposta veloce, zero impegno.</span>
+            </div>
+          </div>
+          <div class="hero-panel">
+            <div class="panel-card">
+              <h2 class="panel-title" data-i18n="hero_panel_title">Come posso aiutarti</h2>
+              <ul class="panel-list">
+                <li data-i18n="hero_panel_item1">Assistenza per casa e ufficio</li>
+                <li data-i18n="hero_panel_item2">Configurazioni sicure e pulite</li>
+                <li data-i18n="hero_panel_item3">Supporto remoto o in presenza</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="section-divider" aria-hidden="true"></div>
+
+      <section class="how-it-works" id="how-it-works">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow" data-i18n="how_eyebrow">Metodo in 3 passi</p>
+            <h2 data-i18n="how_title">Come funziona</h2>
+            <p class="section-subtitle" data-i18n="how_subtitle">
+              Un percorso chiaro: contatto rapido, analisi e soluzione.
+            </p>
+          </div>
+          <div class="steps-grid">
+            <article class="step-card">
+              <div class="step-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M7 5h10a4 4 0 0 1 4 4v4a4 4 0 0 1-4 4H10l-5 4v-4H7a4 4 0 0 1-4-4V9a4 4 0 0 1 4-4z" />
+                  <circle cx="9" cy="11" r="1" />
+                  <circle cx="12" cy="11" r="1" />
+                  <circle cx="15" cy="11" r="1" />
+                </svg>
+              </div>
+              <h3 data-i18n="how_step1_title">1. Contatto rapido</h3>
+              <p data-i18n="how_step1_body">
+                Mi scrivi su WhatsApp: capisco la richiesta e ti dico tempi e costi.
+              </p>
+            </article>
+            <article class="step-card">
+              <div class="step-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="11" cy="11" r="6" />
+                  <path d="M16.5 16.5L21 21" />
+                  <path d="M11 8v6" />
+                  <path d="M8 11h6" />
+                </svg>
+              </div>
+              <h3 data-i18n="how_step2_title">2. Analisi e piano</h3>
+              <p data-i18n="how_step2_body">
+                Valuto il problema e ti propongo la soluzione piu adatta.
+              </p>
+            </article>
+            <article class="step-card">
+              <div class="step-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 3l7 3v6c0 5-3.5 9-7 9s-7-4-7-9V6l7-3z" />
+                  <path d="M9 12l2 2 4-4" />
+                </svg>
+              </div>
+              <h3 data-i18n="how_step3_title">3. Soluzione e supporto</h3>
+              <p data-i18n="how_step3_body">
+                Intervento in presenza o remoto, con indicazioni per mantenere tutto sicuro.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <button class="lang-toggle lang-toggle--floating" id="lang-toggle" type="button" aria-label="Passa a English">
+      EN
+    </button>
+  </body>
+</html>

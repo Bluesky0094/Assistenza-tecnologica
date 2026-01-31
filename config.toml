@@ -1,0 +1,51 @@
+[project]
+name = "assistenza-tecnologica"
+title = "Assistenza Tecnologica"
+description = "Sito servizi bilingue (IT/EN) + strumenti utili client-side"
+timezone = "Europe/Rome"
+
+[languages]
+default = "it"
+available = ["it", "en"]
+strategy = "single_page_toggle" # one URL, JS switches strings
+
+[site]
+tone = "professional_direct"
+mobile_first = true
+accessibility = true
+performance_priority = true
+
+[scope]
+in_person_area_it = "Modica e provincia di Ragusa"
+in_person_area_en = "Modica and the province of Ragusa"
+remote_available = true
+
+[contact]
+preferred = "whatsapp"
+whatsapp_number = "+393514218212"
+email = "assistenza.tecnologica@proton.me"
+
+# Used for WhatsApp click-to-chat prefill
+prefill_message_it = "Ciao! Ho visto il tuo sito e vorrei informazioni sui tuoi servizi."
+prefill_message_en = "Hi! I saw your website and I’d like information about your services."
+
+[structure]
+sections = ["hero", "services", "how_it_works", "tools", "faq", "contact"]
+
+[tools]
+enabled = true
+list = ["password_generator", "passphrase_generator", "qr_code_generator"]
+base_path_it = "strumenti" # future separate pages (not used yet)
+base_path_en = "tools"      # future separate pages (not used yet)
+
+[paths]
+assets_dir = "assets"
+css_dir = "assets/css"
+js_dir = "assets/js"
+img_dir = "assets/img"
+tools_js_dir = "assets/js/tools"
+
+[github]
+use_github = true
+pages_ready = true
+repo_visibility = "private"
