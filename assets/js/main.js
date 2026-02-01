@@ -54,6 +54,20 @@
     how_step3_title: "3. Soluzione e supporto",
     how_step3_body:
       "Intervento in presenza o remoto, con indicazioni per mantenere tutto sicuro.",
+    cta_title: "Hai bisogno di aiuto subito?",
+    cta_body:
+      "Scrivimi su WhatsApp: rispondo velocemente e capiamo insieme la soluzione.",
+    cta_button: "Scrivimi su WhatsApp",
+    footer_title: "Assistenza Tecnologica",
+    footer_tagline:
+      "Supporto tecnico e digitale a Modica e provincia di Ragusa, anche da remoto.",
+    footer_nav: "Navigazione",
+    footer_home: "Home",
+    footer_how: "Come funziona",
+    footer_services: "Servizi",
+    footer_contact_link: "Contatti",
+    footer_contact: "Contatti",
+    footer_whatsapp: "WhatsApp +39 351 421 8212",
     toggle_to_en: "Passa a English",
     toggle_to_it: "Passa a Italiano",
     whatsapp_message: "Ciao! Ho visto il tuo sito e vorrei informazioni sui tuoi servizi.",
@@ -113,6 +127,20 @@
     how_step3_title: "3. Solution and support",
     how_step3_body:
       "On-site or remote help, with guidance to keep things secure.",
+    cta_title: "Need help right away?",
+    cta_body:
+      "Message me on WhatsApp: I reply quickly and we figure out the best solution.",
+    cta_button: "Message me on WhatsApp",
+    footer_title: "Assistenza Tecnologica",
+    footer_tagline:
+      "Technical and digital support in Modica and the province of Ragusa, also remotely.",
+    footer_nav: "Navigation",
+    footer_home: "Home",
+    footer_how: "How it works",
+    footer_services: "Services",
+    footer_contact_link: "Contact",
+    footer_contact: "Contacts",
+    footer_whatsapp: "WhatsApp +39 351 421 8212",
     toggle_to_en: "Switch to English",
     toggle_to_it: "Switch to Italian",
     whatsapp_message: "Hi! I saw your website and I'd like information about your services.",
@@ -127,6 +155,7 @@ const getWhatsAppLink = (lang) =>
 const getStrings = (lang) => ({
   ...translations[lang],
   hero_whatsapp: getWhatsAppLink(lang),
+  footer_whatsapp_link: getWhatsAppLink(lang),
 });
 
 const applyTranslations = (lang) => {
