@@ -152,8 +152,22 @@ img {
   font-weight: 600;
   letter-spacing: 0.02em;
   font-size: 0.95rem;
-  cursor: link;
+  cursor: pointer;
   transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.nav-link[aria-current="page"] {
+  color: var(--accent);
+}
+
+.nav-link[aria-current="page"]::after {
+  content: "";
+  display: block;
+  height: 2px;
+  margin-top: 0.3rem;
+  border-radius: 999px;
+  background: var(--accent);
+  box-shadow: 0 0 12px var(--accent-glow);
 }
 
 .nav-link:hover,
@@ -214,6 +228,10 @@ main {
 .hero {
   position: relative;
   padding: 2.5rem 0 1rem;
+}
+
+section {
+  scroll-margin-top: 90px;
 }
 
 .hero-grid {
@@ -346,6 +364,79 @@ main {
   padding: 2.6rem 0 1.5rem;
 }
 
+.about {
+  padding: 2.6rem 0 1.5rem;
+}
+
+.about-hero {
+  max-width: 720px;
+  margin-bottom: 2rem;
+}
+
+.about-title {
+  margin: 0 0 1rem;
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  line-height: 1.1;
+}
+
+.about-hero p {
+  margin: 0 0 1rem;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.about-grid {
+  display: grid;
+  gap: 1.2rem;
+}
+
+.about-card {
+  background: rgba(16, 24, 38, 0.85);
+  border-radius: 18px;
+  border: 1px solid var(--border);
+  padding: 1.6rem 1.7rem;
+  box-shadow: 0 14px 32px rgba(5, 10, 20, 0.4);
+}
+
+.about-card h2 {
+  margin: 0 0 0.8rem;
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.about-card p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.about-list {
+  margin: 0;
+  padding-left: 1.2rem;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.about-list li {
+  margin-bottom: 0.6rem;
+}
+
+.about-contact-links {
+  margin-top: 0.8rem;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.about-link {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.about-link:hover,
+.about-link:focus-visible {
+  color: var(--accent);
+}
+
 .section-heading {
   max-width: 680px;
   margin-bottom: 2rem;
@@ -460,6 +551,54 @@ main {
   font-size: 1rem;
 }
 
+.faq {
+  padding: 2.6rem 0 1.5rem;
+}
+
+.faq-list {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.faq-item {
+  background: rgba(16, 24, 38, 0.85);
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  padding: 0.2rem 1.4rem;
+  box-shadow: 0 12px 28px rgba(5, 10, 20, 0.35);
+}
+
+.faq-item summary {
+  cursor: pointer;
+  padding: 1rem 0;
+  font-weight: 700;
+  font-size: 1.05rem;
+  list-style: none;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item summary::after {
+  content: "+";
+  float: right;
+  color: var(--accent);
+  font-size: 1.2rem;
+  line-height: 1;
+  margin-top: 0.1rem;
+}
+
+.faq-item[open] summary::after {
+  content: "–";
+}
+
+.faq-item p {
+  margin: 0 0 1rem;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
 .closing-cta {
   padding: 2.8rem 0 2.5rem;
 }
@@ -558,6 +697,10 @@ main {
 
   .steps-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .about-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .services-grid {

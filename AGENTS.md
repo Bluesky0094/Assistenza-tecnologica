@@ -1,8 +1,8 @@
-# Agents Guide (Services Website)
+# AGENTS.md — AssistenzA TecnologicA (Services Website)
 
 ## Project goal
-Build a clean, fast, responsive bilingual website (Italian first, then English) that presents all my services in one place.
-Audience: local people and small businesses who need help with tech and bureaucracy.
+Build a clean, fast, responsive bilingual website (Italian first, then English) that presents my services and makes it easy to contact me.
+Audience: local people and small businesses who need help with tech and digital bureaucracy.
 Tone: professional, direct, trustworthy. No fluff.
 
 ## Constraints
@@ -10,6 +10,7 @@ Tone: professional, direct, trustworthy. No fluff.
 - Mobile-first and accessible (WCAG-minded, practical).
 - Must work well on slow connections.
 - No frameworks or build tools unless explicitly decided later.
+- Keep everything static and GitHub Pages-friendly.
 
 ## Working style (important)
 - Proceed in small steps.
@@ -17,22 +18,37 @@ Tone: professional, direct, trustworthy. No fluff.
 - Keep changes localized (avoid big refactors).
 - Prefer simplicity over “clever”.
 
-## Bilingual approach (simple)
-- Default: Italian.
-- Provide English equivalent for every user-facing string.
-- Use a language toggle:
-  - Option A (recommended first): one page, JS toggles text using a small dictionary.
-  - Option B (later if needed): `/it/` and `/en/` folders with duplicated pages.
-
-Start with Option A to move fast; switch later only if SEO or complexity requires it.
-
-## Site structure (initial)
+## Repo structure (current)
+Pages:
 - `index.html`
-- `assets/css/styles.css`
-- `assets/js/main.js`
-- `assets/img/` (later)
+- `about.html`
 
-## Content blocks (build gradually)
+Assets:
+- `assets/css/`
+- `assets/js/`
+- `assets/img/`
+
+Content sources:
+- `content/about.it.md`
+- `content/about.en.md`
+- `content/services.it.md`
+- `content/services.en.md`
+
+Other:
+- `config.toml`
+
+## Bilingual approach (current implementation)
+Keep three JS files:
+- `assets/js/main.js` → language toggle + shared logic
+- `assets/js/main_it.js` → Italian strings/translations
+- `assets/js/main_en.js` → English strings/translations
+
+Rules:
+- Do not merge these files into one.
+- Every user-facing string must exist in both `main_it.js` and `main_en.js`.
+- `main.js` should remain minimal: toggle + mapping + DOM updates.
+
+## Site structure (build gradually)
 Implement sections one at a time:
 1) Hero (who I help + where + WhatsApp CTA)
 2) Services (cards)
@@ -44,9 +60,17 @@ Implement sections one at a time:
 ## Service scope (high level)
 Include both remote and in-person.
 Primary area: Modica + province of Ragusa, but remote has no boundaries.
-Preferred contact: WhatsApp (number added later).
-Preferred contact: WhatsApp (+393514218212) with prefilled message (IT/EN based on current language)
-Secondary contact: Email (assistenza.tecnologica@proton.me) shown in Contact section and footer
+
+Preferred contact:
+- WhatsApp (+39 351 421 8212) with prefilled message (IT/EN based on current language)
+Secondary contact:
+- Email (assistenza.tecnologica@proton.me) shown in Contact section and footer
+
+## Services
+Services source of truth:
+- `content/services.it.md`
+- `content/services.en.md`
+
 
 ## GitHub readiness
 - Keep everything static.
@@ -54,10 +78,10 @@ Secondary contact: Email (assistenza.tecnologica@proton.me) shown in Contact sec
 - Avoid server-only features.
 
 ## Quality checklist for each step
-- Layout correct on mobile ~360px and desktop.
-- Headings in correct order (H1 once).
+- Layout correct on mobile (~360px) and desktop.
+- Headings in correct order (H1 once per page).
 - Toggle works with keyboard.
-- Buttons/links accessible.
+- Buttons/links accessible and clearly labeled.
 - No console errors; no broken paths.
 
 ## What to avoid (for now)
@@ -68,9 +92,3 @@ Secondary contact: Email (assistenza.tecnologica@proton.me) shown in Contact sec
 ## Decision log
 When a decision is made (e.g., change bilingual strategy), note it briefly here:
 - YYYY-MM-DD: <decision>
-
-## Services
-Services source of truth:
-- content/services.it.md
-- content/services.en.md
-Use these files to build the Services section. Do not invent services.
