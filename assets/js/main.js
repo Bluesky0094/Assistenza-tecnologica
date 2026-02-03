@@ -1,4 +1,4 @@
-const translations = window.TRANSLATIONS || {};
+﻿const translations = window.TRANSLATIONS || {};
 
 const baseWhatsApp = "https://wa.me/393514218212?text=";
 
@@ -90,3 +90,4 @@ const initLanguageToggle = () => {
 };
 
 initLanguageToggle();
+

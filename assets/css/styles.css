@@ -437,6 +437,113 @@ section {
   color: var(--accent);
 }
 
+.tools {
+  padding: 2.6rem 0 1.5rem;
+}
+
+.tool-card {
+  background: rgba(16, 24, 38, 0.85);
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  padding: 1.8rem 1.9rem;
+  box-shadow: 0 18px 40px rgba(5, 10, 20, 0.45);
+  display: grid;
+  gap: 1.4rem;
+}
+
+.tool-row {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.tool-label {
+  font-weight: 700;
+}
+
+.tool-toggle {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.tool-pill {
+  border: 1px solid rgba(59, 130, 246, 0.35);
+  background: rgba(14, 27, 45, 0.6);
+  color: var(--text);
+  padding: 0.5rem 1.1rem;
+  border-radius: 999px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.tool-pill.is-active {
+  border-color: var(--accent);
+  color: var(--accent);
+  box-shadow: 0 0 18px rgba(59, 130, 246, 0.25);
+}
+
+.tool-length {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.tool-length input[type="range"] {
+  flex: 1;
+}
+
+.tool-length-value {
+  font-weight: 700;
+  min-width: 2ch;
+}
+
+.tool-options {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.tool-check {
+  display: inline-flex;
+  gap: 0.5rem;
+  align-items: center;
+  color: var(--muted);
+}
+
+.tool-output {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.tool-output-input {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: rgba(8, 15, 24, 0.8);
+  color: var(--text);
+  font-size: 1rem;
+}
+
+.tool-output .btn {
+  width: 100%;
+}
+
+.tool-hint {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.tool-hint.is-error {
+  color: #f87171;
+}
+
+.tool-hint.is-success {
+  color: #34d399;
+}
+
 .section-heading {
   max-width: 680px;
   margin-bottom: 2rem;
@@ -701,6 +808,15 @@ section {
 
   .about-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .tool-output {
+    grid-template-columns: 1fr auto auto;
+    align-items: center;
+  }
+
+  .tool-output .btn {
+    width: auto;
   }
 
   .services-grid {

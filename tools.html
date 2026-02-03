@@ -1,0 +1,169 @@
+﻿<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Strumenti utili - Assistenza Tecnologica" />
+    <title>Strumenti | Assistenza Tecnologica</title>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <script src="assets/js/main_it.js" defer></script>
+    <script src="assets/js/main_en.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
+    <script src="assets/js/tools.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#tools" data-i18n="skip_link">Vai al contenuto</a>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html#hero" data-i18n="site_title">Assistenza Tecnologica</a>
+        <button
+          class="menu-toggle"
+          id="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="primary-nav"
+        >
+          <span class="menu-icon" aria-hidden="true"><span></span></span>
+          <span class="menu-label" data-i18n="nav_menu">Menu</span>
+        </button>
+        <nav class="site-nav" id="primary-nav" aria-label="Primary">
+          <a class="nav-link" href="index.html#hero" data-i18n="nav_home">Home</a>
+          <a class="nav-link" href="about.html" data-i18n="nav_about">Chi sono</a>
+          <a class="nav-link" href="tools.html" data-i18n="nav_tools" aria-current="page">Strumenti</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="tools" id="tools">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow" data-i18n="tools_eyebrow">Strumenti</p>
+            <h1 data-i18n="tools_title">Generatore password o username</h1>
+            <p class="section-subtitle" data-i18n="tools_subtitle">
+              Crea credenziali sicure o nomi utente puliti in pochi secondi.
+            </p>
+          </div>
+
+          <div class="tool-card" data-tool="credential">
+            <div class="tool-row">
+              <label class="tool-label" data-i18n="tool_mode">Modalità</label>
+              <div class="tool-toggle" role="group" aria-label="Modalità">
+                <button type="button" class="tool-pill is-active" data-mode="password" data-i18n="tool_mode_password">
+                  Password
+                </button>
+                <button type="button" class="tool-pill" data-mode="username" data-i18n="tool_mode_username">
+                  Username
+                </button>
+              </div>
+            </div>
+
+            <div class="tool-row">
+              <label class="tool-label" for="tool-length" data-i18n="tool_length">Lunghezza</label>
+              <div class="tool-length">
+                <input type="range" id="tool-length" min="6" max="24" value="12" />
+                <span class="tool-length-value" id="tool-length-value">12</span>
+              </div>
+            </div>
+
+            <div class="tool-row">
+              <label class="tool-label" data-i18n="tool_include">Includi</label>
+              <div class="tool-options">
+                <label class="tool-check">
+                  <input type="checkbox" id="opt-letters" checked />
+                  <span data-i18n="tool_letters">Lettere</span>
+                </label>
+                <label class="tool-check">
+                  <input type="checkbox" id="opt-numbers" checked />
+                  <span data-i18n="tool_numbers">Numeri</span>
+                </label>
+                <label class="tool-check">
+                  <input type="checkbox" id="opt-symbols" />
+                  <span data-i18n="tool_symbols">Caratteri speciali</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="tool-row tool-output">
+              <input
+                type="text"
+                id="tool-output"
+                class="tool-output-input"
+                readonly
+                placeholder=""
+                aria-label="Output"
+              />
+              <button class="btn btn-primary" type="button" id="tool-generate" data-i18n="tool_generate">
+                Genera
+              </button>
+              <button class="btn" type="button" id="tool-copy" data-i18n="tool_copy">Copia</button>
+            </div>
+
+            <p class="tool-hint" id="tool-hint" data-i18n="tool_hint">
+              Seleziona almeno una categoria di caratteri.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="closing-cta" id="contact">
+        <div class="container cta-card">
+          <div class="cta-content">
+            <h2 data-i18n="cta_title">Hai bisogno di aiuto subito?</h2>
+            <p data-i18n="cta_body">
+              Scrivimi su WhatsApp: rispondo velocemente e capiamo insieme la soluzione.
+            </p>
+          </div>
+          <div class="cta-actions">
+            <a
+              class="btn btn-primary"
+              data-i18n="cta_button"
+              data-i18n-attr="href:hero_whatsapp"
+              href="https://wa.me/393514218212?text=Ciao!%20Ho%20visto%20il%20tuo%20sito%20e%20vorrei%20informazioni%20sui%20tuoi%20servizi."
+            >
+              Scrivimi su WhatsApp
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-brand">
+          <p class="footer-title" data-i18n="footer_title">Assistenza Tecnologica</p>
+          <p class="footer-tagline" data-i18n="footer_tagline">
+            Supporto tecnico e digitale a Modica e provincia di Ragusa, anche da remoto.
+          </p>
+        </div>
+        <div class="footer-nav">
+          <p class="footer-label" data-i18n="footer_nav">Navigazione</p>
+          <a class="footer-link" href="index.html#hero" data-i18n="footer_home">Home</a>
+          <a class="footer-link" href="about.html" data-i18n="footer_about">Chi sono</a>
+          <a class="footer-link" href="tools.html" data-i18n="footer_tools">Strumenti</a>
+          <a class="footer-link" href="#contact" data-i18n="footer_contact_link">Contatti</a>
+        </div>
+        <div class="footer-contact">
+          <p class="footer-label" data-i18n="footer_contact">Contatti</p>
+          <a
+            class="footer-link"
+            data-i18n="footer_whatsapp"
+            data-i18n-attr="href:footer_whatsapp_link"
+            href="https://wa.me/393514218212?text=Ciao!%20Ho%20visto%20il%20tuo%20sito%20e%20vorrei%20informazioni%20sui%20tuoi%20servizi."
+          >
+            WhatsApp +39 351 421 8212
+          </a>
+          <a class="footer-link" href="mailto:assistenza.tecnologica@proton.me">
+            assistenza.tecnologica@proton.me
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <button class="lang-toggle lang-toggle--floating" id="lang-toggle" type="button" aria-label="Passa a English">
+      EN
+    </button>
+  </body>
+</html>
+
