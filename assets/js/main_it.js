@@ -101,15 +101,26 @@ window.TRANSLATIONS.it = {
   tools_subtitle: "Crea credenziali sicure o nomi utente puliti in pochi secondi.",
   tool_mode: "Modalità",
   tool_mode_password: "Password",
+  tool_mode_passphrase: "Passphrase",
   tool_mode_username: "Username",
   tool_length: "Lunghezza",
   tool_include: "Includi",
   tool_letters: "Lettere",
   tool_numbers: "Numeri",
   tool_symbols: "Caratteri speciali",
+  tool_username_digits: "Cifre finali",
   tool_generate: "Genera",
   tool_copy: "Copia",
   tool_hint: "Seleziona almeno una categoria di caratteri.",
+  pass_eyebrow: "Passphrase",
+  pass_title: "Generatore passphrase",
+  pass_subtitle: "Frasi facili da ricordare ma robuste, con parole casuali.",
+  pass_words: "Numero parole",
+  pass_separator: "Separatore",
+  pass_digits: "Numeri da aggiungere",
+  pass_generate: "Genera",
+  pass_copy: "Copia",
+  pass_hint: "Usiamo parole casuali della stessa lista (fino a 24 parole).",
   about_title: "Chi sono",
   about_intro_1:
     "Mi chiamo Stefano e aiuto persone e piccole attività a risolvere problemi tecnologici e digitali in modo semplice, chiaro e sicuro.",
@@ -148,5 +159,9 @@ window.TRANSLATIONS.it = {
   toggle_to_it: "Passa a Italiano",
   whatsapp_message: "Ciao! Ho visto il tuo sito e vorrei informazioni sui tuoi servizi.",
 };
+
+
+
+
 
 

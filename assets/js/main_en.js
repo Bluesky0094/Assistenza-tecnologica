@@ -101,15 +101,26 @@ window.TRANSLATIONS.en = {
   tools_subtitle: "Create secure credentials or clean usernames in seconds.",
   tool_mode: "Mode",
   tool_mode_password: "Password",
+  tool_mode_passphrase: "Passphrase",
   tool_mode_username: "Username",
   tool_length: "Length",
   tool_include: "Include",
   tool_letters: "Letters",
   tool_numbers: "Numbers",
   tool_symbols: "Special characters",
+  tool_username_digits: "Ending digits",
   tool_generate: "Generate",
   tool_copy: "Copy",
   tool_hint: "Select at least one character category.",
+  pass_eyebrow: "Passphrase",
+  pass_title: "Passphrase generator",
+  pass_subtitle: "Memorable but strong phrases with random words.",
+  pass_words: "Number of words",
+  pass_separator: "Separator",
+  pass_digits: "Numbers to add",
+  pass_generate: "Generate",
+  pass_copy: "Copy",
+  pass_hint: "We use random words from the same list (up to 24 words).",
   about_title: "About me",
   about_intro_1:
     "My name is Stefano. I help individuals and small businesses solve tech and digital problems in a simple, clear, and secure way.",
@@ -147,5 +158,9 @@ window.TRANSLATIONS.en = {
   toggle_to_it: "Switch to Italian",
   whatsapp_message: "Hi! I saw your website and I'd like information about your services.",
 };
+
+
+
+
 
 
