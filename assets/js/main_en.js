@@ -40,7 +40,7 @@ window.TRANSLATIONS.en = {
   service_3_title: "Account Security & Access Recovery",
   service_3_body:
     "Strong passwords, 2FA, password managers, account recovery, securing accounts after suspicious access, and scam prevention.",
-  service_4_title: "Privacy & Advanced Security",
+  service_4_title: "Privacy & Advanced Security (legal use)",
   service_4_body:
     "File/backup encryption, privacy-focused device and browser setup, reduced tracking, and practical data-protection configurations.",
   service_5_title: "Multimedia & Documents",
@@ -52,7 +52,7 @@ window.TRANSLATIONS.en = {
   service_7_title: "Basic Websites",
   service_7_body:
     "Simple showcase websites (one-page or a few pages), WhatsApp contact, map, domain/hosting setup, essential updates.",
-  service_8_title: "1-to-1 Training",
+  service_8_title: "1-to-1 Training (Adults & Seniors)",
   service_8_body:
     "Practical lessons for computer/tablet/smartphone: WhatsApp, email, photos, files, useful apps, and everyday digital safety.",
   faq_eyebrow: "FAQ",
@@ -103,6 +103,7 @@ window.TRANSLATIONS.en = {
   tool_mode_password: "Password",
   tool_mode_passphrase: "Passphrase",
   tool_mode_username: "Username",
+  tool_mode_aria: "Mode",
   tool_length: "Length",
   tool_include: "Include",
   tool_letters: "Letters",
@@ -112,6 +113,8 @@ window.TRANSLATIONS.en = {
   tool_generate: "Generate",
   tool_copy: "Copy",
   tool_hint: "Select at least one character category.",
+  tool_output_aria: "Output",
+  tool_space_option: "space",
   pass_eyebrow: "Passphrase",
   pass_title: "Passphrase generator",
   pass_subtitle: "Memorable but strong phrases with random words.",

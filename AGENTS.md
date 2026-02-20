@@ -1,4 +1,4 @@
-# AGENTS.md — AssistenzA TecnologicA (Services Website)
+# AGENTS.md - AssistenzA TecnologicA (Services Website)
 
 ## Project goal
 Build a clean, fast, responsive bilingual website (Italian first, then English) that presents my services and makes it easy to contact me.
@@ -14,14 +14,15 @@ Tone: professional, direct, trustworthy. No fluff.
 
 ## Working style (important)
 - Proceed in small steps.
-- Before writing code, propose the next small change in 2–6 bullet points.
+- Before writing code, propose the next small change in 2-6 bullet points.
 - Keep changes localized (avoid big refactors).
-- Prefer simplicity over “clever”.
+- Prefer simplicity over "clever".
 
 ## Repo structure (current)
 Pages:
 - `index.html`
 - `about.html`
+- `tools.html`
 
 Assets:
 - `assets/css/`
@@ -39,9 +40,9 @@ Other:
 
 ## Bilingual approach (current implementation)
 Keep three JS files:
-- `assets/js/main.js` → language toggle + shared logic
-- `assets/js/main_it.js` → Italian strings/translations
-- `assets/js/main_en.js` → English strings/translations
+- `assets/js/main.js` -> language toggle + shared logic
+- `assets/js/main_it.js` -> Italian strings/translations
+- `assets/js/main_en.js` -> English strings/translations
 
 Rules:
 - Do not merge these files into one.
@@ -71,7 +72,6 @@ Services source of truth:
 - `content/services.it.md`
 - `content/services.en.md`
 
-
 ## GitHub readiness
 - Keep everything static.
 - Use relative paths (works on GitHub Pages).
@@ -91,4 +91,4 @@ Services source of truth:
 
 ## Decision log
 When a decision is made (e.g., change bilingual strategy), note it briefly here:
-- YYYY-MM-DD: <decision>
+- 2026-02-20: `tools.html` is official in current scope; markdown files are canonical source for services/about wording.

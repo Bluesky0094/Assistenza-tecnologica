@@ -40,7 +40,7 @@ window.TRANSLATIONS.it = {
   service_3_title: "Sicurezza Account & Recupero Accessi",
   service_3_body:
     "Password sicure, 2FA, password manager, recupero account, messa in sicurezza dopo accessi sospetti e prevenzione truffe.",
-  service_4_title: "Privacy & Sicurezza Avanzata",
+  service_4_title: "Privacy & Sicurezza Avanzata (uso lecito)",
   service_4_body:
     "Crittografia di file/backup, setup privacy su dispositivi e browser, riduzione tracciamento e configurazioni orientate alla protezione dei dati.",
   service_5_title: "Multimedia & Documenti",
@@ -52,7 +52,7 @@ window.TRANSLATIONS.it = {
   service_7_title: "Siti Web Base",
   service_7_body:
     "Siti vetrina (one-page o poche pagine), contatti WhatsApp, mappa, dominio/hosting, aggiornamenti essenziali.",
-  service_8_title: "Lezioni Personalizzate",
+  service_8_title: "Lezioni Personalizzate (Adulti & Anziani)",
   service_8_body:
     "Lezioni pratiche su computer/tablet/smartphone: WhatsApp, email, foto, file, app utili e sicurezza quotidiana.",
   faq_eyebrow: "FAQ",
@@ -103,6 +103,7 @@ window.TRANSLATIONS.it = {
   tool_mode_password: "Password",
   tool_mode_passphrase: "Passphrase",
   tool_mode_username: "Username",
+  tool_mode_aria: "Modalità",
   tool_length: "Lunghezza",
   tool_include: "Includi",
   tool_letters: "Lettere",
@@ -112,6 +113,8 @@ window.TRANSLATIONS.it = {
   tool_generate: "Genera",
   tool_copy: "Copia",
   tool_hint: "Seleziona almeno una categoria di caratteri.",
+  tool_output_aria: "Output",
+  tool_space_option: "spazio",
   pass_eyebrow: "Passphrase",
   pass_title: "Generatore passphrase",
   pass_subtitle: "Frasi facili da ricordare ma robuste, con parole casuali.",

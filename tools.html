@@ -50,7 +50,7 @@
           <div class="tool-card" data-tool="generator">
             <div class="tool-row">
               <label class="tool-label" data-i18n="tool_mode">Modalità</label>
-              <div class="tool-toggle" role="tablist" aria-label="Modalità">
+              <div class="tool-toggle" role="tablist" aria-label="Modalità" data-i18n-attr="aria-label:tool_mode_aria">
                 <button
                   type="button"
                   class="tool-pill is-active"
@@ -92,6 +92,7 @@
                 readonly
                 placeholder=""
                 aria-label="Output"
+                data-i18n-attr="aria-label:tool_output_aria"
               />
               <button class="btn btn-primary" type="button" id="tool-generate" data-i18n="tool_generate">
                 Genera
@@ -146,7 +147,7 @@
                   <option value="-" selected>-</option>
                   <option value="_">_</option>
                   <option value=".">.</option>
-                  <option value=" ">spazio</option>
+                  <option value=" " data-i18n="tool_space_option">spazio</option>
                 </select>
               </div>
 

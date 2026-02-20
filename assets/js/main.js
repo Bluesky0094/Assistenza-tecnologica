@@ -56,10 +56,27 @@ const applyTranslations = (lang) => {
   localStorage.setItem("site_lang", lang);
 };
 
+const initFaqAccordion = () => {
+  const faqItems = document.querySelectorAll(".faq-list .faq-item");
+  if (!faqItems.length) return;
+
+  faqItems.forEach((item) => {
+    item.addEventListener("toggle", () => {
+      if (!item.open) return;
+      faqItems.forEach((otherItem) => {
+        if (otherItem !== item) {
+          otherItem.open = false;
+        }
+      });
+    });
+  });
+};
+
 const initLanguageToggle = () => {
   const saved = localStorage.getItem("site_lang");
   const initial = saved && translations[saved] ? saved : "it";
   applyTranslations(initial);
+  initFaqAccordion();
 
   const nav = document.getElementById("primary-nav");
   const menuToggle = document.getElementById("menu-toggle");
