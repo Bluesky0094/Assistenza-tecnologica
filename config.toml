@@ -27,10 +27,10 @@ email = "assistenza.tecnologica@proton.me"
 
 # Used for WhatsApp click-to-chat prefill
 prefill_message_it = "Ciao! Ho visto il tuo sito e vorrei informazioni sui tuoi servizi."
-prefill_message_en = "Hi! I saw your website and I’d like information about your services."
+prefill_message_en = "Hi! I saw your website and I'd like information about your services."
 
 [structure]
-sections = ["hero", "services", "how_it_works", "tools", "faq", "contact"]
+sections = ["hero", "how_it_works", "services", "faq", "contact", "tools"]
 
 [tools]
 enabled = true

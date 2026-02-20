@@ -9,6 +9,7 @@
     <script src="assets/js/main_it.js" defer></script>
     <script src="assets/js/main_en.js" defer></script>
     <script src="assets/js/main.js" defer></script>
+    <script src="assets/js/wordlist.js" defer></script>
     <script src="assets/js/tools.js" defer></script>
   </head>
   <body>
@@ -40,48 +41,46 @@
         <div class="container">
           <div class="section-heading">
             <p class="eyebrow" data-i18n="tools_eyebrow">Strumenti</p>
-            <h1 data-i18n="tools_title">Generatore password o username</h1>
+            <h1 data-i18n="tools_title">Generatori password, username e QR</h1>
             <p class="section-subtitle" data-i18n="tools_subtitle">
-              Crea credenziali sicure o nomi utente puliti in pochi secondi.
+              Crea credenziali sicure, nomi utente puliti e codici QR in pochi secondi.
             </p>
           </div>
 
-          <div class="tool-card" data-tool="credential">
+          <div class="tool-card" data-tool="generator">
             <div class="tool-row">
               <label class="tool-label" data-i18n="tool_mode">Modalità</label>
-              <div class="tool-toggle" role="group" aria-label="Modalità">
-                <button type="button" class="tool-pill is-active" data-mode="password" data-i18n="tool_mode_password">
+              <div class="tool-toggle" role="tablist" aria-label="Modalità" data-i18n-attr="aria-label:tool_mode_aria">
+                <button
+                  type="button"
+                  class="tool-pill is-active"
+                  data-mode="password"
+                  role="tab"
+                  aria-selected="true"
+                  data-i18n="tool_mode_password"
+                >
                   Password
                 </button>
-                <button type="button" class="tool-pill" data-mode="username" data-i18n="tool_mode_username">
+                <button
+                  type="button"
+                  class="tool-pill"
+                  data-mode="passphrase"
+                  role="tab"
+                  aria-selected="false"
+                  data-i18n="tool_mode_passphrase"
+                >
+                  Passphrase
+                </button>
+                <button
+                  type="button"
+                  class="tool-pill"
+                  data-mode="username"
+                  role="tab"
+                  aria-selected="false"
+                  data-i18n="tool_mode_username"
+                >
                   Username
                 </button>
-              </div>
-            </div>
-
-            <div class="tool-row">
-              <label class="tool-label" for="tool-length" data-i18n="tool_length">Lunghezza</label>
-              <div class="tool-length">
-                <input type="range" id="tool-length" min="6" max="24" value="12" />
-                <span class="tool-length-value" id="tool-length-value">12</span>
-              </div>
-            </div>
-
-            <div class="tool-row">
-              <label class="tool-label" data-i18n="tool_include">Includi</label>
-              <div class="tool-options">
-                <label class="tool-check">
-                  <input type="checkbox" id="opt-letters" checked />
-                  <span data-i18n="tool_letters">Lettere</span>
-                </label>
-                <label class="tool-check">
-                  <input type="checkbox" id="opt-numbers" checked />
-                  <span data-i18n="tool_numbers">Numeri</span>
-                </label>
-                <label class="tool-check">
-                  <input type="checkbox" id="opt-symbols" />
-                  <span data-i18n="tool_symbols">Caratteri speciali</span>
-                </label>
               </div>
             </div>
 
@@ -93,16 +92,148 @@
                 readonly
                 placeholder=""
                 aria-label="Output"
+                data-i18n-attr="aria-label:tool_output_aria"
               />
               <button class="btn btn-primary" type="button" id="tool-generate" data-i18n="tool_generate">
                 Genera
               </button>
-              <button class="btn" type="button" id="tool-copy" data-i18n="tool_copy">Copia</button>
+              <button class="btn" type="button" id="tool-copy" data-i18n="tool_copy" disabled>Copia</button>
             </div>
 
             <p class="tool-hint" id="tool-hint" data-i18n="tool_hint">
               Seleziona almeno una categoria di caratteri.
             </p>
+
+            <div class="tool-options-panel" data-panel="password">
+              <div class="tool-row">
+                <label class="tool-label" for="tool-length" data-i18n="tool_length">Lunghezza</label>
+                <div class="tool-length">
+                  <input type="range" id="tool-length" min="6" max="24" value="12" />
+                  <span class="tool-length-value" id="tool-length-value">12</span>
+                </div>
+              </div>
+
+              <div class="tool-row">
+                <label class="tool-label" data-i18n="tool_include">Includi</label>
+                <div class="tool-options">
+                  <label class="tool-check">
+                    <input type="checkbox" id="opt-letters" checked />
+                    <span data-i18n="tool_letters">Lettere</span>
+                  </label>
+                  <label class="tool-check">
+                    <input type="checkbox" id="opt-numbers" checked />
+                    <span data-i18n="tool_numbers">Numeri</span>
+                  </label>
+                  <label class="tool-check">
+                    <input type="checkbox" id="opt-symbols" />
+                    <span data-i18n="tool_symbols">Caratteri speciali</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <div class="tool-options-panel" data-panel="passphrase" hidden>
+              <div class="tool-row">
+                <label class="tool-label" for="pass-words" data-i18n="pass_words">Numero parole</label>
+                <div class="tool-length">
+              <input type="range" id="pass-words" min="3" max="24" value="3" />
+                  <span class="tool-length-value" id="pass-words-value">3</span>
+                </div>
+              </div>
+
+              <div class="tool-row">
+                <label class="tool-label" for="pass-sep" data-i18n="pass_separator">Separatore</label>
+                <select id="pass-sep" class="tool-select">
+                  <option value="-" selected>-</option>
+                  <option value="_">_</option>
+                  <option value=".">.</option>
+                  <option value=" " data-i18n="tool_space_option">spazio</option>
+                </select>
+              </div>
+
+              <div class="tool-row">
+                <label class="tool-label" for="pass-digits" data-i18n="pass_digits">Numeri da aggiungere</label>
+                <select id="pass-digits" class="tool-select"></select>
+              </div>
+            </div>
+
+            <div class="tool-options-panel" data-panel="username" hidden>
+              <div class="tool-row">
+                <label class="tool-label" data-i18n="tool_include">Includi</label>
+                <div class="tool-options">
+                  <label class="tool-check">
+                    <input type="checkbox" id="opt-letters-username" checked />
+                    <span data-i18n="tool_letters">Lettere</span>
+                  </label>
+                  <label class="tool-check">
+                    <input type="checkbox" id="opt-numbers-username" checked />
+                    <span data-i18n="tool_numbers">Numeri</span>
+                  </label>
+                  <label class="tool-check">
+                    <input type="checkbox" id="opt-symbols-username" />
+                    <span data-i18n="tool_symbols">Caratteri speciali</span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="tool-row">
+                <label class="tool-label" for="username-digits" data-i18n="tool_username_digits">Cifre finali</label>
+                <select id="username-digits" class="tool-select">
+                  <option value="1">1</option>
+                  <option value="2" selected>2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="tool-card" data-tool="qr">
+            <div class="tool-row">
+              <h2 class="tool-title" data-i18n="qr_title">Generatore QR Code</h2>
+              <p class="tool-hint" data-i18n="qr_subtitle">
+                Inserisci un testo o link e genera subito il QR.
+              </p>
+            </div>
+
+            <div class="tool-row">
+              <label class="tool-label" for="qr-input" data-i18n="qr_input_label">Testo o link</label>
+              <input
+                type="text"
+                id="qr-input"
+                class="tool-output-input"
+                placeholder="Incolla qui un link o testo"
+                aria-label="Testo o link per QR"
+                data-i18n-attr="placeholder:qr_input_placeholder,aria-label:qr_input_aria"
+              />
+            </div>
+
+            <div class="tool-row">
+              <label class="tool-label" for="qr-size" data-i18n="qr_size_label">Dimensione</label>
+              <select id="qr-size" class="tool-select">
+                <option value="200">200 x 200</option>
+                <option value="256" selected>256 x 256</option>
+                <option value="320">320 x 320</option>
+              </select>
+            </div>
+
+            <div class="qr-actions">
+              <button class="btn btn-primary" type="button" id="qr-generate" data-i18n="qr_generate">
+                Genera QR
+              </button>
+              <button class="btn" type="button" id="qr-download" data-i18n="qr_download" disabled>
+                Scarica PNG
+              </button>
+            </div>
+
+            <p class="tool-hint" id="qr-hint" data-i18n="qr_hint">
+              Inserisci un testo o URL valido per generare il codice.
+            </p>
+
+            <div class="qr-preview" id="qr-preview" aria-live="polite">
+              <img id="qr-image" class="qr-image" alt="Anteprima QR Code" data-i18n-attr="alt:qr_preview_alt" hidden />
+            </div>
           </div>
         </div>
       </section>
@@ -166,4 +297,9 @@
     </button>
   </body>
 </html>
+
+
+
+
+
 

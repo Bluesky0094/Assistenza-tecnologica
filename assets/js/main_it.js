@@ -40,7 +40,7 @@ window.TRANSLATIONS.it = {
   service_3_title: "Sicurezza Account & Recupero Accessi",
   service_3_body:
     "Password sicure, 2FA, password manager, recupero account, messa in sicurezza dopo accessi sospetti e prevenzione truffe.",
-  service_4_title: "Privacy & Sicurezza Avanzata",
+  service_4_title: "Privacy & Sicurezza Avanzata (uso lecito)",
   service_4_body:
     "Crittografia di file/backup, setup privacy su dispositivi e browser, riduzione tracciamento e configurazioni orientate alla protezione dei dati.",
   service_5_title: "Multimedia & Documenti",
@@ -52,7 +52,7 @@ window.TRANSLATIONS.it = {
   service_7_title: "Siti Web Base",
   service_7_body:
     "Siti vetrina (one-page o poche pagine), contatti WhatsApp, mappa, dominio/hosting, aggiornamenti essenziali.",
-  service_8_title: "Lezioni Personalizzate",
+  service_8_title: "Lezioni Personalizzate (Adulti & Anziani)",
   service_8_body:
     "Lezioni pratiche su computer/tablet/smartphone: WhatsApp, email, foto, file, app utili e sicurezza quotidiana.",
   faq_eyebrow: "FAQ",
@@ -97,19 +97,44 @@ window.TRANSLATIONS.it = {
   footer_contact: "Contatti",
   footer_whatsapp: "WhatsApp +39 351 421 8212",
   tools_eyebrow: "Strumenti",
-  tools_title: "Generatore password o username",
-  tools_subtitle: "Crea credenziali sicure o nomi utente puliti in pochi secondi.",
+  tools_title: "Generatori password, username e QR",
+  tools_subtitle:
+    "Crea credenziali sicure, nomi utente puliti e codici QR in pochi secondi.",
   tool_mode: "Modalità",
   tool_mode_password: "Password",
+  tool_mode_passphrase: "Passphrase",
   tool_mode_username: "Username",
+  tool_mode_aria: "Modalità",
   tool_length: "Lunghezza",
   tool_include: "Includi",
   tool_letters: "Lettere",
   tool_numbers: "Numeri",
   tool_symbols: "Caratteri speciali",
+  tool_username_digits: "Cifre finali",
   tool_generate: "Genera",
   tool_copy: "Copia",
   tool_hint: "Seleziona almeno una categoria di caratteri.",
+  tool_output_aria: "Output",
+  tool_space_option: "spazio",
+  pass_eyebrow: "Passphrase",
+  pass_title: "Generatore passphrase",
+  pass_subtitle: "Frasi facili da ricordare ma robuste, con parole casuali.",
+  pass_words: "Numero parole",
+  pass_separator: "Separatore",
+  pass_digits: "Numeri da aggiungere",
+  pass_generate: "Genera",
+  pass_copy: "Copia",
+  pass_hint: "Usiamo parole casuali della stessa lista (fino a 24 parole).",
+  qr_title: "Generatore QR Code",
+  qr_subtitle: "Inserisci un testo o link e genera subito il QR.",
+  qr_input_label: "Testo o link",
+  qr_input_placeholder: "Incolla qui un link o testo",
+  qr_input_aria: "Testo o link per QR",
+  qr_size_label: "Dimensione",
+  qr_generate: "Genera QR",
+  qr_download: "Scarica PNG",
+  qr_hint: "Inserisci un testo o URL valido per generare il codice.",
+  qr_preview_alt: "Anteprima QR Code",
   about_title: "Chi sono",
   about_intro_1:
     "Mi chiamo Stefano e aiuto persone e piccole attività a risolvere problemi tecnologici e digitali in modo semplice, chiaro e sicuro.",
@@ -148,5 +173,9 @@ window.TRANSLATIONS.it = {
   toggle_to_it: "Passa a Italiano",
   whatsapp_message: "Ciao! Ho visto il tuo sito e vorrei informazioni sui tuoi servizi.",
 };
+
+
+
+
 
 

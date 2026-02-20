@@ -40,7 +40,7 @@ window.TRANSLATIONS.en = {
   service_3_title: "Account Security & Access Recovery",
   service_3_body:
     "Strong passwords, 2FA, password managers, account recovery, securing accounts after suspicious access, and scam prevention.",
-  service_4_title: "Privacy & Advanced Security",
+  service_4_title: "Privacy & Advanced Security (legal use)",
   service_4_body:
     "File/backup encryption, privacy-focused device and browser setup, reduced tracking, and practical data-protection configurations.",
   service_5_title: "Multimedia & Documents",
@@ -52,7 +52,7 @@ window.TRANSLATIONS.en = {
   service_7_title: "Basic Websites",
   service_7_body:
     "Simple showcase websites (one-page or a few pages), WhatsApp contact, map, domain/hosting setup, essential updates.",
-  service_8_title: "1-to-1 Training",
+  service_8_title: "1-to-1 Training (Adults & Seniors)",
   service_8_body:
     "Practical lessons for computer/tablet/smartphone: WhatsApp, email, photos, files, useful apps, and everyday digital safety.",
   faq_eyebrow: "FAQ",
@@ -97,19 +97,44 @@ window.TRANSLATIONS.en = {
   footer_contact: "Contacts",
   footer_whatsapp: "WhatsApp +39 351 421 8212",
   tools_eyebrow: "Tools",
-  tools_title: "Password or username generator",
-  tools_subtitle: "Create secure credentials or clean usernames in seconds.",
+  tools_title: "Password, username, and QR generators",
+  tools_subtitle:
+    "Create secure credentials, clean usernames, and QR codes in seconds.",
   tool_mode: "Mode",
   tool_mode_password: "Password",
+  tool_mode_passphrase: "Passphrase",
   tool_mode_username: "Username",
+  tool_mode_aria: "Mode",
   tool_length: "Length",
   tool_include: "Include",
   tool_letters: "Letters",
   tool_numbers: "Numbers",
   tool_symbols: "Special characters",
+  tool_username_digits: "Ending digits",
   tool_generate: "Generate",
   tool_copy: "Copy",
   tool_hint: "Select at least one character category.",
+  tool_output_aria: "Output",
+  tool_space_option: "space",
+  pass_eyebrow: "Passphrase",
+  pass_title: "Passphrase generator",
+  pass_subtitle: "Memorable but strong phrases with random words.",
+  pass_words: "Number of words",
+  pass_separator: "Separator",
+  pass_digits: "Numbers to add",
+  pass_generate: "Generate",
+  pass_copy: "Copy",
+  pass_hint: "We use random words from the same list (up to 24 words).",
+  qr_title: "QR Code Generator",
+  qr_subtitle: "Enter text or a link and generate a QR instantly.",
+  qr_input_label: "Text or link",
+  qr_input_placeholder: "Paste a link or text here",
+  qr_input_aria: "Text or link for QR",
+  qr_size_label: "Size",
+  qr_generate: "Generate QR",
+  qr_download: "Download PNG",
+  qr_hint: "Enter valid text or URL to generate the code.",
+  qr_preview_alt: "QR code preview",
   about_title: "About me",
   about_intro_1:
     "My name is Stefano. I help individuals and small businesses solve tech and digital problems in a simple, clear, and secure way.",
@@ -147,5 +172,9 @@ window.TRANSLATIONS.en = {
   toggle_to_it: "Switch to Italian",
   whatsapp_message: "Hi! I saw your website and I'd like information about your services.",
 };
+
+
+
+
 
 
