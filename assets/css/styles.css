@@ -463,6 +463,11 @@ section {
   gap: 0.8rem;
 }
 
+.tool-title {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
 .tool-label {
   font-weight: 700;
 }
@@ -567,6 +572,31 @@ section {
 
 .tool-options-panel[hidden] {
   display: none;
+}
+
+.qr-actions {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.qr-actions .btn {
+  width: 100%;
+}
+
+.qr-preview {
+  min-height: 150px;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  background: rgba(8, 15, 24, 0.8);
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+}
+
+.qr-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
 }
 
 .section-heading {
@@ -840,6 +870,15 @@ section {
   }
 
   .tool-output .btn {
+    width: auto;
+  }
+
+  .qr-actions {
+    grid-template-columns: auto auto;
+    justify-content: start;
+  }
+
+  .qr-actions .btn {
     width: auto;
   }
 

@@ -213,6 +213,62 @@
   updateMode(mode);
 })();
 
+(() => {
+  const qrRoot = document.querySelector("[data-tool='qr']");
+  if (!qrRoot) return;
+
+  const qrInput = document.getElementById("qr-input");
+  const qrSize = document.getElementById("qr-size");
+  const qrGenerate = document.getElementById("qr-generate");
+  const qrDownload = document.getElementById("qr-download");
+  const qrImage = document.getElementById("qr-image");
+  const qrHint = document.getElementById("qr-hint");
+
+  if (!qrInput || !qrSize || !qrGenerate || !qrDownload || !qrImage) return;
+
+  const buildQrUrl = (text, size) =>
+    `https://api.qrserver.com/v1/create-qr-code/?size=${size}x${size}&margin=0&data=${encodeURIComponent(text)}`;
+
+  const clearHintState = () => {
+    if (!qrHint) return;
+    qrHint.classList.remove("is-error", "is-success");
+  };
+
+  const generateQr = () => {
+    const text = qrInput.value.trim();
+    if (!text) {
+      qrImage.hidden = true;
+      qrImage.removeAttribute("src");
+      qrDownload.disabled = true;
+      if (qrHint) qrHint.classList.add("is-error");
+      return;
+    }
+
+    clearHintState();
+    if (qrHint) qrHint.classList.add("is-success");
+
+    const size = Number(qrSize.value) || 256;
+    qrImage.src = buildQrUrl(text, size);
+    qrImage.hidden = false;
+    qrDownload.disabled = false;
+  };
+
+  const downloadQr = () => {
+    if (!qrImage.src) return;
+    const link = document.createElement("a");
+    link.href = qrImage.src;
+    link.download = "assistenza-tecnologica-qr.png";
+    link.rel = "noopener";
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+  };
+
+  qrGenerate.addEventListener("click", generateQr);
+  qrDownload.addEventListener("click", downloadQr);
+  qrInput.addEventListener("input", clearHintState);
+})();
+
 
 
 

@@ -41,9 +41,9 @@
         <div class="container">
           <div class="section-heading">
             <p class="eyebrow" data-i18n="tools_eyebrow">Strumenti</p>
-            <h1 data-i18n="tools_title">Generatore password o username</h1>
+            <h1 data-i18n="tools_title">Generatori password, username e QR</h1>
             <p class="section-subtitle" data-i18n="tools_subtitle">
-              Crea credenziali sicure o nomi utente puliti in pochi secondi.
+              Crea credenziali sicure, nomi utente puliti e codici QR in pochi secondi.
             </p>
           </div>
 
@@ -186,6 +186,53 @@
                   <option value="5">5</option>
                 </select>
               </div>
+            </div>
+          </div>
+
+          <div class="tool-card" data-tool="qr">
+            <div class="tool-row">
+              <h2 class="tool-title" data-i18n="qr_title">Generatore QR Code</h2>
+              <p class="tool-hint" data-i18n="qr_subtitle">
+                Inserisci un testo o link e genera subito il QR.
+              </p>
+            </div>
+
+            <div class="tool-row">
+              <label class="tool-label" for="qr-input" data-i18n="qr_input_label">Testo o link</label>
+              <input
+                type="text"
+                id="qr-input"
+                class="tool-output-input"
+                placeholder="Incolla qui un link o testo"
+                aria-label="Testo o link per QR"
+                data-i18n-attr="placeholder:qr_input_placeholder,aria-label:qr_input_aria"
+              />
+            </div>
+
+            <div class="tool-row">
+              <label class="tool-label" for="qr-size" data-i18n="qr_size_label">Dimensione</label>
+              <select id="qr-size" class="tool-select">
+                <option value="200">200 x 200</option>
+                <option value="256" selected>256 x 256</option>
+                <option value="320">320 x 320</option>
+              </select>
+            </div>
+
+            <div class="qr-actions">
+              <button class="btn btn-primary" type="button" id="qr-generate" data-i18n="qr_generate">
+                Genera QR
+              </button>
+              <button class="btn" type="button" id="qr-download" data-i18n="qr_download" disabled>
+                Scarica PNG
+              </button>
+            </div>
+
+            <p class="tool-hint" id="qr-hint" data-i18n="qr_hint">
+              Inserisci un testo o URL valido per generare il codice.
+            </p>
+
+            <div class="qr-preview" id="qr-preview" aria-live="polite">
+              <img id="qr-image" class="qr-image" alt="Anteprima QR Code" data-i18n-attr="alt:qr_preview_alt" hidden />
             </div>
           </div>
         </div>
