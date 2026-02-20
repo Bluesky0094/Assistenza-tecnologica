@@ -710,6 +710,10 @@ section {
   padding: 2.8rem 0 2.5rem;
 }
 
+.tools + .closing-cta {
+  padding-top: 3.4rem;
+}
+
 .cta-card {
   background: linear-gradient(150deg, rgba(18, 30, 48, 0.95), rgba(10, 19, 33, 0.98));
   border-radius: 24px;
@@ -835,6 +839,10 @@ section {
 }
 
 @media (max-width: 720px) {
+  main {
+    padding-bottom: 2.25rem;
+  }
+
   .site-nav {
     position: absolute;
     top: 100%;
@@ -868,5 +876,14 @@ section {
 
   .step-card {
     grid-template-columns: 1fr auto;
+  }
+
+  .tools + .closing-cta {
+    padding-top: 2.6rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .site-footer {
+    margin-top: 1.25rem;
   }
 }
