@@ -441,6 +441,38 @@ section {
   padding: 2.6rem 0 1.5rem;
 }
 
+
+.tools-stack {
+  display: grid;
+  gap: 1.6rem;
+}
+
+.tool-title {
+  margin: 0;
+  font-size: clamp(1.25rem, 2.3vw, 1.6rem);
+}
+
+.tool-description {
+  margin: -0.6rem 0 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.qr-preview {
+  display: grid;
+  place-items: center;
+  border: 1px dashed rgba(148, 163, 184, 0.35);
+  border-radius: 16px;
+  padding: 1rem;
+  background: rgba(8, 15, 24, 0.45);
+}
+
+.qr-preview img {
+  width: auto;
+  height: auto;
+  border-radius: 10px;
+}
+
 .tool-card {
   background: rgba(16, 24, 38, 0.85);
   border-radius: 20px;
@@ -528,6 +560,11 @@ section {
 
 .tool-output .btn {
   width: 100%;
+}
+
+.tool-output .btn[aria-disabled="true"] {
+  opacity: 0.5;
+  pointer-events: none;
 }
 
 .tool-hint {
@@ -710,6 +747,10 @@ section {
   padding: 2.8rem 0 2.5rem;
 }
 
+.tools + .closing-cta {
+  padding-top: 3.4rem;
+}
+
 .cta-card {
   background: linear-gradient(150deg, rgba(18, 30, 48, 0.95), rgba(10, 19, 33, 0.98));
   border-radius: 24px;
@@ -835,6 +876,10 @@ section {
 }
 
 @media (max-width: 720px) {
+  main {
+    padding-bottom: 2.25rem;
+  }
+
   .site-nav {
     position: absolute;
     top: 100%;
@@ -868,5 +913,14 @@ section {
 
   .step-card {
     grid-template-columns: 1fr auto;
+  }
+
+  .tools + .closing-cta {
+    padding-top: 2.6rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .site-footer {
+    margin-top: 1.25rem;
   }
 }

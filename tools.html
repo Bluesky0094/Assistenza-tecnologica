@@ -46,63 +46,104 @@
             </p>
           </div>
 
-          <div class="tool-card" data-tool="credential">
-            <div class="tool-row">
-              <label class="tool-label" data-i18n="tool_mode">Modalità</label>
-              <div class="tool-toggle" role="group" aria-label="Modalità">
-                <button type="button" class="tool-pill is-active" data-mode="password" data-i18n="tool_mode_password">
-                  Password
+          <div class="tools-stack">
+            <div class="tool-card" data-tool="credential">
+              <h2 class="tool-title" data-i18n="tool_credential_title">Generatore password o username</h2>
+
+              <div class="tool-row">
+                <label class="tool-label" data-i18n="tool_mode">Modalità</label>
+                <div class="tool-toggle" role="group" aria-label="Modalità">
+                  <button type="button" class="tool-pill is-active" data-mode="password" data-i18n="tool_mode_password">
+                    Password
+                  </button>
+                  <button type="button" class="tool-pill" data-mode="username" data-i18n="tool_mode_username">
+                    Username
+                  </button>
+                </div>
+              </div>
+
+              <div class="tool-row">
+                <label class="tool-label" for="tool-length" data-i18n="tool_length">Lunghezza</label>
+                <div class="tool-length">
+                  <input type="range" id="tool-length" min="6" max="24" value="12" />
+                  <span class="tool-length-value" id="tool-length-value">12</span>
+                </div>
+              </div>
+
+              <div class="tool-row">
+                <label class="tool-label" data-i18n="tool_include">Includi</label>
+                <div class="tool-options">
+                  <label class="tool-check">
+                    <input type="checkbox" id="opt-letters" checked />
+                    <span data-i18n="tool_letters">Lettere</span>
+                  </label>
+                  <label class="tool-check">
+                    <input type="checkbox" id="opt-numbers" checked />
+                    <span data-i18n="tool_numbers">Numeri</span>
+                  </label>
+                  <label class="tool-check">
+                    <input type="checkbox" id="opt-symbols" />
+                    <span data-i18n="tool_symbols">Caratteri speciali</span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="tool-row tool-output">
+                <input
+                  type="text"
+                  id="tool-output"
+                  class="tool-output-input"
+                  readonly
+                  placeholder=""
+                  aria-label="Output"
+                />
+                <button class="btn btn-primary" type="button" id="tool-generate" data-i18n="tool_generate">
+                  Genera
                 </button>
-                <button type="button" class="tool-pill" data-mode="username" data-i18n="tool_mode_username">
-                  Username
-                </button>
+                <button class="btn" type="button" id="tool-copy" data-i18n="tool_copy">Copia</button>
               </div>
+
+              <p class="tool-hint" id="tool-hint" data-i18n="tool_hint">
+                Seleziona almeno una categoria di caratteri.
+              </p>
             </div>
 
-            <div class="tool-row">
-              <label class="tool-label" for="tool-length" data-i18n="tool_length">Lunghezza</label>
-              <div class="tool-length">
-                <input type="range" id="tool-length" min="6" max="24" value="12" />
-                <span class="tool-length-value" id="tool-length-value">12</span>
+            <div class="tool-card" data-tool="qr">
+              <h2 class="tool-title" data-i18n="tool_qr_title">Generatore QR code</h2>
+              <p class="tool-description" data-i18n="tool_qr_subtitle">
+                Inserisci un link o un testo breve e crea subito un QR code da condividere.
+              </p>
+
+              <div class="tool-row">
+                <label class="tool-label" for="qr-input" data-i18n="tool_qr_input_label">Testo o link</label>
+                <input
+                  type="text"
+                  id="qr-input"
+                  class="tool-output-input"
+                  data-i18n-attr="placeholder:tool_qr_input_placeholder"
+                  placeholder="https://esempio.it"
+                />
               </div>
-            </div>
 
-            <div class="tool-row">
-              <label class="tool-label" data-i18n="tool_include">Includi</label>
-              <div class="tool-options">
-                <label class="tool-check">
-                  <input type="checkbox" id="opt-letters" checked />
-                  <span data-i18n="tool_letters">Lettere</span>
-                </label>
-                <label class="tool-check">
-                  <input type="checkbox" id="opt-numbers" checked />
-                  <span data-i18n="tool_numbers">Numeri</span>
-                </label>
-                <label class="tool-check">
-                  <input type="checkbox" id="opt-symbols" />
-                  <span data-i18n="tool_symbols">Caratteri speciali</span>
-                </label>
+              <div class="tool-row">
+                <label class="tool-label" for="qr-size" data-i18n="tool_qr_size">Dimensione</label>
+                <div class="tool-length">
+                  <input type="range" id="qr-size" min="180" max="420" step="20" value="260" />
+                  <span class="tool-length-value" id="qr-size-value">260</span>
+                </div>
               </div>
-            </div>
 
-            <div class="tool-row tool-output">
-              <input
-                type="text"
-                id="tool-output"
-                class="tool-output-input"
-                readonly
-                placeholder=""
-                aria-label="Output"
-              />
-              <button class="btn btn-primary" type="button" id="tool-generate" data-i18n="tool_generate">
-                Genera
-              </button>
-              <button class="btn" type="button" id="tool-copy" data-i18n="tool_copy">Copia</button>
-            </div>
+              <div class="tool-row tool-output">
+                <button class="btn btn-primary" type="button" id="qr-generate" data-i18n="tool_qr_generate">Crea QR</button>
+                <a class="btn" id="qr-download" href="#" download="qr-code.png" data-i18n="tool_qr_download" aria-disabled="true">Scarica PNG</a>
+              </div>
 
-            <p class="tool-hint" id="tool-hint" data-i18n="tool_hint">
-              Seleziona almeno una categoria di caratteri.
-            </p>
+              <div class="qr-preview" id="qr-preview" hidden>
+                <img id="qr-image" alt="QR code generato" data-i18n-attr="alt:tool_qr_image_alt" />
+              </div>
+
+              <p class="tool-hint" id="qr-hint" data-i18n="tool_qr_hint">Inserisci un testo o link valido.</p>
+            </div>
           </div>
         </div>
       </section>
