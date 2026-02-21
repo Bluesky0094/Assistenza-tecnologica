@@ -269,7 +269,124 @@
   qrInput.addEventListener("input", clearHintState);
 })();
 
+(() => {
+  const checkerRoot = document.querySelector("[data-tool='password-checker']");
+  if (!checkerRoot) return;
 
+  const checkerInput = document.getElementById("checker-input");
+  const checkerAnalyze = document.getElementById("checker-analyze");
+  const checkerHint = document.getElementById("checker-hint");
+  const checkerScore = document.getElementById("checker-score");
+  const checkerList = document.getElementById("checker-list");
 
+  if (!checkerInput || !checkerAnalyze || !checkerHint || !checkerScore || !checkerList) return;
 
+  const t = (key, fallback) => {
+    const lang = document.documentElement.lang === "en" ? "en" : "it";
+    const dict = window.translations && window.translations[lang];
+    return (dict && dict[key]) || fallback;
+  };
 
+  const buildFeedback = (value) => {
+    const checks = [
+      {
+        pass: value.length >= 12,
+        ok: t("checker_rule_length_ok", "Length is 12+ characters."),
+        ko: t("checker_rule_length_ko", "Use at least 12 characters."),
+      },
+      {
+        pass: /[a-z]/.test(value) && /[A-Z]/.test(value),
+        ok: t("checker_rule_case_ok", "Uppercase and lowercase letters are present."),
+        ko: t("checker_rule_case_ko", "Mix uppercase and lowercase letters."),
+      },
+      {
+        pass: /\d/.test(value),
+        ok: t("checker_rule_number_ok", "Contains at least one number."),
+        ko: t("checker_rule_number_ko", "Add at least one number."),
+      },
+      {
+        pass: /[^A-Za-z0-9]/.test(value),
+        ok: t("checker_rule_symbol_ok", "Contains at least one symbol."),
+        ko: t("checker_rule_symbol_ko", "Add at least one symbol (example: !@#)."),
+      },
+      {
+        pass: !/(.)\1{2,}/.test(value),
+        ok: t("checker_rule_repeat_ok", "No long repeated characters found."),
+        ko: t("checker_rule_repeat_ko", "Avoid repeating the same character too many times."),
+      },
+    ];
+
+    const passed = checks.filter((check) => check.pass).length;
+    return { checks, passed };
+  };
+
+  const levelText = (passed) => {
+    if (passed <= 2) {
+      return {
+        label: t("checker_level_weak", "Weak"),
+        className: "is-error",
+      };
+    }
+
+    if (passed === 3 || passed === 4) {
+      return {
+        label: t("checker_level_medium", "Medium"),
+        className: "",
+      };
+    }
+
+    return {
+      label: t("checker_level_strong", "Strong"),
+      className: "is-success",
+    };
+  };
+
+  const clearHintState = () => {
+    checkerHint.classList.remove("is-error", "is-success");
+    checkerScore.classList.remove("is-error", "is-success");
+  };
+
+  const analyze = () => {
+    const value = checkerInput.value;
+
+    if (!value.trim()) {
+      clearHintState();
+      checkerHint.classList.add("is-error");
+      checkerHint.textContent = t(
+        "checker_hint_empty",
+        "Insert a password before running the check.",
+      );
+      checkerScore.textContent = t("checker_score_waiting", "Waiting for analysis.");
+      checkerList.innerHTML = "";
+      return;
+    }
+
+    const { checks, passed } = buildFeedback(value);
+    const level = levelText(passed);
+
+    clearHintState();
+    if (level.className) {
+      checkerHint.classList.add(level.className);
+      checkerScore.classList.add(level.className);
+    }
+
+    checkerHint.textContent = t(
+      "checker_hint_done",
+      "Review the suggestions and strengthen the password if needed.",
+    );
+    checkerScore.textContent = t("checker_score_label", "Security level") + ": " + level.label;
+
+    checkerList.innerHTML = checks
+      .map((check) => `<li>${check.pass ? "✅" : "•"} ${check.pass ? check.ok : check.ko}</li>`)
+      .join("");
+  };
+
+  checkerAnalyze.addEventListener("click", analyze);
+  checkerInput.addEventListener("input", () => {
+    clearHintState();
+    checkerHint.textContent = t(
+      "checker_hint_default",
+      "Insert a password to see the security level.",
+    );
+  });
+})();

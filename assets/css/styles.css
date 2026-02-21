@@ -574,6 +574,28 @@ section {
   display: none;
 }
 
+.check-result {
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: rgba(8, 15, 24, 0.75);
+  padding: 0.9rem 1rem;
+  display: grid;
+  gap: 0.6rem;
+}
+
+.check-score {
+  margin: 0;
+  font-weight: 700;
+}
+
+.check-list {
+  margin: 0;
+  padding-left: 1.1rem;
+  color: var(--muted);
+  display: grid;
+  gap: 0.35rem;
+}
+
 .qr-actions {
   display: grid;
   gap: 0.8rem;
