@@ -97,7 +97,7 @@
               <button class="btn btn-primary" type="button" id="tool-generate" data-i18n="tool_generate">
                 Genera
               </button>
-              <button class="btn" type="button" id="tool-copy" data-i18n="tool_copy" disabled>Copia</button>
+              <button class="btn btn-secondary" type="button" id="tool-copy" data-i18n="tool_copy" disabled>Copia</button>
             </div>
 
             <p class="tool-hint" id="tool-hint" data-i18n="tool_hint">
@@ -189,6 +189,46 @@
             </div>
           </div>
 
+
+
+          <div class="tool-card" data-tool="password-checker">
+            <div class="tool-row">
+              <h2 class="tool-title" data-i18n="checker_title">Controllo password</h2>
+              <p class="tool-hint" data-i18n="checker_subtitle">
+                Verifica la robustezza di una password e ricevi consigli pratici.
+              </p>
+            </div>
+
+            <div class="tool-row">
+              <label class="tool-label" for="checker-input" data-i18n="checker_input_label">Password da controllare</label>
+              <input
+                type="text"
+                id="checker-input"
+                class="tool-output-input"
+                placeholder="Incolla qui la password"
+                aria-label="Password da controllare"
+                data-i18n-attr="placeholder:checker_input_placeholder,aria-label:checker_input_aria"
+                autocomplete="off"
+                spellcheck="false"
+              />
+            </div>
+
+            <div class="qr-actions">
+              <button class="btn btn-primary" type="button" id="checker-analyze" data-i18n="checker_analyze">
+                Analizza password
+              </button>
+            </div>
+
+            <p class="tool-hint" id="checker-hint" data-i18n="checker_hint_default">
+              Inserisci una password per vedere il livello di sicurezza.
+            </p>
+
+            <div class="check-result" id="checker-result" aria-live="polite">
+              <p class="check-score" id="checker-score" data-i18n="checker_score_waiting">In attesa di analisi.</p>
+              <ul class="check-list" id="checker-list"></ul>
+            </div>
+          </div>
+
           <div class="tool-card" data-tool="qr">
             <div class="tool-row">
               <h2 class="tool-title" data-i18n="qr_title">Generatore QR Code</h2>
@@ -222,7 +262,7 @@
               <button class="btn btn-primary" type="button" id="qr-generate" data-i18n="qr_generate">
                 Genera QR
               </button>
-              <button class="btn" type="button" id="qr-download" data-i18n="qr_download" disabled>
+              <button class="btn btn-secondary" type="button" id="qr-download" data-i18n="qr_download" disabled>
                 Scarica PNG
               </button>
             </div>
