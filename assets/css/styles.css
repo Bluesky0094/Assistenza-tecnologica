@@ -574,6 +574,28 @@ section {
   display: none;
 }
 
+.check-result {
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: rgba(8, 15, 24, 0.75);
+  padding: 0.9rem 1rem;
+  display: grid;
+  gap: 0.6rem;
+}
+
+.check-score {
+  margin: 0;
+  font-weight: 700;
+}
+
+.check-list {
+  margin: 0;
+  padding-left: 1.1rem;
+  color: var(--muted);
+  display: grid;
+  gap: 0.35rem;
+}
+
 .qr-actions {
   display: grid;
   gap: 0.8rem;
@@ -918,7 +940,7 @@ section {
     border: 1px solid var(--border);
     box-shadow: 0 18px 40px rgba(4, 8, 18, 0.6);
     flex-direction: column;
-    align-items: stretch;
+    align-items: flex-end;
     gap: 0.35rem;
     display: none;
     width: min(180px, calc(100% - 2rem));
@@ -933,8 +955,15 @@ section {
   }
 
   .nav-link {
-    width: 100%;
+    display: inline-flex;
+    width: auto;
     text-align: right;
+    align-self: flex-end;
+    padding-inline: 0.4rem;
+  }
+
+  .nav-link[aria-current="page"]::after {
+    width: 100%;
   }
 
   .step-card {
@@ -950,4 +979,3 @@ section {
     margin-top: 1.25rem;
   }
 }
-
