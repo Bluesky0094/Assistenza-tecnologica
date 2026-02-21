@@ -987,7 +987,7 @@ section {
     height: 2px;
     margin-top: 0.3rem;
     border-radius: 999px;
-    background: transparent;
+    background: rgba(148, 163, 184, 0.45);
   }
 
   .nav-link[aria-current="page"]::after,
