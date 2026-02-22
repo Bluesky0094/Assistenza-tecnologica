@@ -227,7 +227,7 @@
   if (!qrInput || !qrSize || !qrGenerate || !qrDownload || !qrImage) return;
 
   const buildQrUrl = (text, size) =>
-    `https://api.qrserver.com/v1/create-qr-code/?size=${size}x${size}&margin=0&data=${encodeURIComponent(text)}`;
+    `https://api.qrserver.com/v1/create-qr-code/?size=${size}x${size}&margin=2&data=${encodeURIComponent(text)}`;
 
   const clearHintState = () => {
     if (!qrHint) return;
@@ -247,7 +247,7 @@
     clearHintState();
     if (qrHint) qrHint.classList.add("is-success");
 
-    const size = Number(qrSize.value) || 256;
+    const size = Number(qrSize.value) || 300;
     qrImage.src = buildQrUrl(text, size);
     qrImage.hidden = false;
     qrDownload.disabled = false;
