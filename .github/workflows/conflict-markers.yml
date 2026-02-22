@@ -1,0 +1,18 @@
+name: Conflict marker guard
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  check-conflict-markers:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install ripgrep
+        run: sudo apt-get update && sudo apt-get install -y ripgrep
+
+      - name: Check for unresolved conflict markers
+        run: bash scripts/check-conflict-markers.sh
