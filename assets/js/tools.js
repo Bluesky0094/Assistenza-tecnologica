@@ -283,7 +283,11 @@
 
   const t = (key, fallback) => {
     const lang = document.documentElement.lang === "en" ? "en" : "it";
+#<<<<<<< codex/adjust-mobile-menu-width-and-underline
     const dict = window.TRANSLATIONS && window.TRANSLATIONS[lang];
+#=======
+    const dict = window.translations && window.translations[lang];
+#>>>>>>> main
     return (dict && dict[key]) || fallback;
   };
 
