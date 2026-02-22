@@ -281,14 +281,18 @@
 
   if (!checkerInput || !checkerAnalyze || !checkerHint || !checkerScore || !checkerList) return;
 
+  const getCurrentLang = () => {
+    const saved = localStorage.getItem("site_lang");
+    if (saved === "en" || saved === "it") return saved;
+    return document.documentElement.lang === "en" ? "en" : "it";
+  };
+
   const t = (key, fallback) => {
-    const lang = document.documentElement.lang === "en" ? "en" : "it";
-#<<<<<<< codex/adjust-mobile-menu-width-and-underline
-    const dict = window.TRANSLATIONS && window.TRANSLATIONS[lang];
-#=======
-    const dict = window.translations && window.translations[lang];
-#>>>>>>> main
-    return (dict && dict[key]) || fallback;
+    const lang = getCurrentLang();
+    const dictionaries = window.TRANSLATIONS || {};
+    const currentDict = dictionaries[lang] || {};
+    const italianDict = dictionaries.it || {};
+    return currentDict[key] || italianDict[key] || fallback;
   };
 
   const buildFeedback = (value) => {
