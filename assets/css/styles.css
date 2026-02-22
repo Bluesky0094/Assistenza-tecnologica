@@ -973,10 +973,14 @@ section {
   }
 
   .nav-link {
+#<<<<<<< codex/adjust-mobile-menu-width-and-underline
+    display: inline-block;
+#=======
 #<<<<<<< codex/adjust-mobile-menu-width-and-underline-3nwdu6
     display: inline-block;
 #=======
     display: inline-flex;
+#>>>>>>> main
 #>>>>>>> main
     width: auto;
     text-align: right;
@@ -984,7 +988,10 @@ section {
     padding-inline: 0.4rem;
   }
 
+#<<<<<<< codex/adjust-mobile-menu-width-and-underline
+#=======
 #<<<<<<< codex/adjust-mobile-menu-width-and-underline-3nwdu6
+#>>>>>>> main
   .nav-link::after {
     content: "";
     display: block;
@@ -1000,9 +1007,12 @@ section {
   .nav-link:focus-visible::after {
     background: var(--accent);
     box-shadow: 0 0 12px var(--accent-glow);
+#<<<<<<< codex/adjust-mobile-menu-width-and-underline
+#=======
 #=======
   .nav-link[aria-current="page"]::after {
     width: 100%;
+#>>>>>>> main
 #>>>>>>> main
   }
 
