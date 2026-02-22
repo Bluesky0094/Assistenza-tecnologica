@@ -973,13 +973,18 @@ section {
   }
 
   .nav-link {
+#<<<<<<< codex/adjust-mobile-menu-width-and-underline-3nwdu6
     display: inline-block;
+#=======
+    display: inline-flex;
+#>>>>>>> main
     width: auto;
     text-align: right;
     align-self: flex-end;
     padding-inline: 0.4rem;
   }
 
+#<<<<<<< codex/adjust-mobile-menu-width-and-underline-3nwdu6
   .nav-link::after {
     content: "";
     display: block;
@@ -995,6 +1000,10 @@ section {
   .nav-link:focus-visible::after {
     background: var(--accent);
     box-shadow: 0 0 12px var(--accent-glow);
+#=======
+  .nav-link[aria-current="page"]::after {
+    width: 100%;
+#>>>>>>> main
   }
 
   .step-card {
