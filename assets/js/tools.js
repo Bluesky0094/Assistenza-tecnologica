@@ -221,6 +221,7 @@
   const qrSize = document.getElementById("qr-size");
   const qrGenerate = document.getElementById("qr-generate");
   const qrDownload = document.getElementById("qr-download");
+  const qrPlaceholder = document.getElementById("qr-placeholder");
   const qrImage = document.getElementById("qr-image");
   const qrHint = document.getElementById("qr-hint");
 
@@ -239,6 +240,7 @@
     if (!text) {
       qrImage.hidden = true;
       qrImage.removeAttribute("src");
+      if (qrPlaceholder) qrPlaceholder.hidden = false;
       qrDownload.disabled = true;
       if (qrHint) qrHint.classList.add("is-error");
       return;
@@ -250,6 +252,7 @@
     const size = Number(qrSize.value) || 300;
     qrImage.src = buildQrUrl(text, size);
     qrImage.hidden = false;
+    if (qrPlaceholder) qrPlaceholder.hidden = true;
     qrDownload.disabled = false;
   };
 
@@ -267,6 +270,13 @@
   qrGenerate.addEventListener("click", generateQr);
   qrDownload.addEventListener("click", downloadQr);
   qrInput.addEventListener("input", clearHintState);
+  qrImage.addEventListener("error", () => {
+    qrImage.hidden = true;
+    qrImage.removeAttribute("src");
+    if (qrPlaceholder) qrPlaceholder.hidden = false;
+    qrDownload.disabled = true;
+    if (qrHint) qrHint.classList.add("is-error");
+  });
 })();
 
 (() => {

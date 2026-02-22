@@ -390,8 +390,13 @@ section {
 }
 
 .about-hero {
-  max-width: 720px;
+  display: grid;
+  gap: 1.2rem;
   margin-bottom: 2rem;
+}
+
+.about-hero-copy {
+  max-width: 720px;
 }
 
 .about-title {
@@ -404,6 +409,57 @@ section {
   margin: 0 0 1rem;
   color: var(--muted);
   line-height: 1.7;
+}
+
+.about-hero-aside {
+  display: none;
+}
+
+.about-hero-icon-wrap {
+  position: relative;
+  width: 220px;
+  height: 220px;
+  border-radius: 22px;
+  border: 1px solid rgba(59, 130, 246, 0.28);
+  background:
+    radial-gradient(120px 120px at 35% 30%, rgba(59, 130, 246, 0.22), transparent 72%),
+    rgba(16, 24, 38, 0.88);
+  display: grid;
+  place-items: center;
+  box-shadow:
+    0 18px 40px rgba(5, 10, 20, 0.45),
+    inset 0 0 30px rgba(59, 130, 246, 0.12);
+  overflow: hidden;
+}
+
+.about-hero-icon-wrap::before,
+.about-hero-icon-wrap::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.about-hero-icon-wrap::before {
+  width: 142px;
+  height: 142px;
+  border: 1px solid rgba(59, 130, 246, 0.26);
+  box-shadow: inset 0 0 22px rgba(59, 130, 246, 0.12);
+}
+
+.about-hero-icon-wrap::after {
+  width: 98px;
+  height: 98px;
+  border: 1px solid rgba(59, 130, 246, 0.38);
+}
+
+.about-hero-icon {
+  width: 86px;
+  height: 86px;
+  color: var(--accent);
+  filter: drop-shadow(0 0 14px rgba(59, 130, 246, 0.35));
+  position: relative;
+  z-index: 1;
 }
 
 .about-grid {
@@ -642,6 +698,13 @@ section {
   padding: 1.4rem;
 }
 
+.qr-placeholder {
+  margin: 0;
+  color: var(--muted);
+  font-size: 1.05rem;
+  letter-spacing: 0.01em;
+}
+
 .qr-image {
   width: min(100%, 340px);
   max-width: 100%;
@@ -654,6 +717,10 @@ section {
     0 16px 36px rgba(2, 6, 12, 0.55),
     0 0 0 1px rgba(255, 255, 255, 0.03) inset;
   image-rendering: pixelated;
+}
+
+.qr-image[hidden] {
+  display: none !important;
 }
 
 .section-heading {
@@ -923,6 +990,19 @@ section {
 
   .about-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .about-hero {
+    grid-template-columns: minmax(0, 1fr) 240px;
+    align-items: start;
+    column-gap: 2rem;
+  }
+
+  .about-hero-aside {
+    display: block;
+    justify-self: end;
+    align-self: center;
+    margin-top: 0;
   }
 
   .tool-output {
