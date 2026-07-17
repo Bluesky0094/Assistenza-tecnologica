@@ -170,11 +170,11 @@ img {
   transition: color 0.2s ease, transform 0.2s ease;
 }
 
-.nav-link[aria-current="page"] {
+.nav-link[aria-current] {
   color: var(--accent);
 }
 
-.nav-link[aria-current="page"]::after {
+.nav-link[aria-current]::after {
   content: "";
   display: block;
   height: 2px;
@@ -1101,7 +1101,7 @@ section {
     background: rgba(148, 163, 184, 0.45);
   }
 
-  .nav-link[aria-current="page"]::after,
+  .nav-link[aria-current]::after,
   .nav-link:hover::after,
   .nav-link:focus-visible::after {
     background: var(--accent);

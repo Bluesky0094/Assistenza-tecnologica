@@ -79,11 +79,63 @@ const initFaqAccordion = () => {
   });
 };
 
+const initSectionNavigation = () => {
+  const nav = document.getElementById("primary-nav");
+  if (!nav || !document.getElementById("hero")) return;
+
+  const sectionLinks = [...nav.querySelectorAll("a.nav-link[href^='#']")]
+    .map((link) => ({ link, section: document.querySelector(link.getAttribute("href")) }))
+    .filter((item) => item.section);
+
+  if (!sectionLinks.length) return;
+
+  const setActive = (activeLink) => {
+    sectionLinks.forEach(({ link }) => {
+      if (link === activeLink) {
+        link.setAttribute("aria-current", "location");
+      } else {
+        link.removeAttribute("aria-current");
+      }
+    });
+  };
+
+  const updateActiveSection = () => {
+    const headerHeight = document.querySelector(".site-header")?.offsetHeight || 0;
+    const marker = window.scrollY + headerHeight + 80;
+    const ordered = [...sectionLinks].sort((a, b) => a.section.offsetTop - b.section.offsetTop);
+    let current = ordered[0];
+
+    ordered.forEach((item) => {
+      if (item.section.offsetTop <= marker) current = item;
+    });
+
+    setActive(current.link);
+  };
+
+  let ticking = false;
+  const requestUpdate = () => {
+    if (ticking) return;
+    ticking = true;
+    window.requestAnimationFrame(() => {
+      updateActiveSection();
+      ticking = false;
+    });
+  };
+
+  sectionLinks.forEach(({ link }) => {
+    link.addEventListener("click", () => setActive(link));
+  });
+  window.addEventListener("scroll", requestUpdate, { passive: true });
+  window.addEventListener("resize", requestUpdate);
+  updateActiveSection();
+};
+
 const initLanguageToggle = () => {
   const saved = localStorage.getItem("site_lang");
   const initial = saved && translations[saved] ? saved : "it";
   applyTranslations(initial);
   initFaqAccordion();
+  initSectionNavigation();
 
   const nav = document.getElementById("primary-nav");
   const menuToggle = document.getElementById("menu-toggle");
