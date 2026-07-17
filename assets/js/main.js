@@ -10,6 +10,8 @@ const getWhatsAppLink = (lang) => {
   return `${baseWhatsApp}${encodeURIComponent(strings.whatsapp_message)}`;
 };
 
+const getMessageLink = (message) => `${baseWhatsApp}${encodeURIComponent(message)}`;
+
 const getStrings = (lang) => {
   const base = translations[lang];
   if (!base) return null;
@@ -18,6 +20,11 @@ const getStrings = (lang) => {
     ...base,
     hero_whatsapp: getWhatsAppLink(lang),
     footer_whatsapp_link: getWhatsAppLink(lang),
+    service_1_whatsapp: getMessageLink(base.service_1_message || base.whatsapp_message),
+    service_2_whatsapp: getMessageLink(base.service_2_message || base.whatsapp_message),
+    service_3_whatsapp: getMessageLink(base.service_3_message || base.whatsapp_message),
+    service_4_whatsapp: getMessageLink(base.service_4_message || base.whatsapp_message),
+    business_whatsapp: getMessageLink(base.business_message || base.whatsapp_message),
   };
 };
 
@@ -94,6 +101,13 @@ const initLanguageToggle = () => {
         menuToggle.setAttribute("aria-expanded", "false");
       }
     });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key !== "Escape" || !nav.classList.contains("is-open")) return;
+      nav.classList.remove("is-open");
+      menuToggle.setAttribute("aria-expanded", "false");
+      menuToggle.focus();
+    });
   }
 
   const toggle = document.getElementById("lang-toggle");
@@ -107,4 +121,3 @@ const initLanguageToggle = () => {
 };
 
 initLanguageToggle();
-

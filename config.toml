@@ -1,7 +1,7 @@
 [project]
 name = "assistenza-tecnologica"
 title = "Assistenza Tecnologica"
-description = "Sito servizi bilingue (IT/EN) + strumenti utili client-side"
+description = "Assistenza tecnologica locale e remota, con strumenti gratuiti e privati nel browser"
 timezone = "Europe/Rome"
 
 [languages]

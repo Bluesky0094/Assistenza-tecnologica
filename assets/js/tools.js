@@ -36,6 +36,17 @@
   };
   const usernameSymbolsList = ["_", "."];
 
+  const secureRandomInt = (max) => {
+    if (!Number.isInteger(max) || max <= 0) return 0;
+    const range = 0x100000000;
+    const limit = Math.floor(range / max) * max;
+    const value = new Uint32Array(1);
+    do {
+      window.crypto.getRandomValues(value);
+    } while (value[0] >= limit);
+    return value[0] % max;
+  };
+
   const updateLengthLabel = () => {
     if (lengthValue) lengthValue.textContent = lengthInput.value;
   };
@@ -84,18 +95,18 @@
     return charset;
   };
 
-  const pickWord = () => words[Math.floor(Math.random() * words.length)];
+  const pickWord = () => words[secureRandomInt(words.length)];
 
   const randomDigits = (count) => {
     let result = "";
     for (let i = 0; i < count; i += 1) {
-      result += Math.floor(Math.random() * 10).toString();
+      result += secureRandomInt(10).toString();
     }
     return result;
   };
 
   const buildUsername = () => {
-    const wordCount = Math.random() < 0.5 ? 1 : 2;
+    const wordCount = secureRandomInt(2) + 1;
     const parts = [];
     for (let i = 0; i < wordCount; i += 1) {
       parts.push(pickWord());
@@ -103,7 +114,7 @@
     let base = parts.join("");
 
     if (usernameSymbols && usernameSymbols.checked) {
-      const symbol = usernameSymbolsList[Math.floor(Math.random() * usernameSymbolsList.length)];
+      const symbol = usernameSymbolsList[secureRandomInt(usernameSymbolsList.length)];
       base = wordCount === 2 ? parts.join(symbol) : `${base}${symbol}`;
     }
 
@@ -137,7 +148,7 @@
     const length = Number(lengthInput.value);
     let result = "";
     for (let i = 0; i < length; i += 1) {
-      const idx = Math.floor(Math.random() * charset.length);
+      const idx = secureRandomInt(charset.length);
       result += charset[idx];
     }
 
@@ -158,9 +169,9 @@
     if (digitsToAdd > 0) {
       const available = [...Array(count).keys()];
       for (let i = 0; i < Math.min(digitsToAdd, count); i += 1) {
-        const idx = Math.floor(Math.random() * available.length);
+        const idx = secureRandomInt(available.length);
         const wordIndex = available.splice(idx, 1)[0];
-        parts[wordIndex] = `${parts[wordIndex]}${Math.floor(Math.random() * 10)}`;
+        parts[wordIndex] = `${parts[wordIndex]}${secureRandomInt(10)}`;
       }
     }
 
@@ -227,9 +238,6 @@
 
   if (!qrInput || !qrSize || !qrGenerate || !qrDownload || !qrImage) return;
 
-  const buildQrUrl = (text, size) =>
-    `https://api.qrserver.com/v1/create-qr-code/?size=${size}x${size}&margin=2&data=${encodeURIComponent(text)}`;
-
   const clearHintState = () => {
     if (!qrHint) return;
     qrHint.classList.remove("is-error", "is-success");
@@ -249,11 +257,23 @@
     clearHintState();
     if (qrHint) qrHint.classList.add("is-success");
 
-    const size = Number(qrSize.value) || 300;
-    qrImage.src = buildQrUrl(text, size);
-    qrImage.hidden = false;
-    if (qrPlaceholder) qrPlaceholder.hidden = true;
-    qrDownload.disabled = false;
+    try {
+      const size = Number(qrSize.value) || 300;
+      const code = window.qrcode(0, "M");
+      code.addData(text);
+      code.make();
+      const cellSize = Math.max(2, Math.floor((size - 8) / code.getModuleCount()));
+      qrImage.src = code.createDataURL(cellSize, 4);
+      qrImage.hidden = false;
+      if (qrPlaceholder) qrPlaceholder.hidden = true;
+      qrDownload.disabled = false;
+    } catch (error) {
+      qrImage.hidden = true;
+      qrImage.removeAttribute("src");
+      if (qrPlaceholder) qrPlaceholder.hidden = false;
+      qrDownload.disabled = true;
+      if (qrHint) qrHint.classList.add("is-error");
+    }
   };
 
   const downloadQr = () => {

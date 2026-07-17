@@ -5,26 +5,27 @@ Quick contact: WhatsApp **+39 351 421 8212** · Email **assistenza.tecnologica@p
 
 ---
 
-## Tech Support (Devices & Backups)
-PC, smartphone, tablet, printers, and home network: setup, troubleshooting, optimization, data migration, and backups.
+## PCs, smartphones, Wi-Fi, and printers
+Setup, software issues, slow devices, updates, home networks, data transfers, and backups.
 
-## Online Services & Payments (SPID, Government Portals, Banking)
-Guided support for digital identity (SPID/CIE), government portals, online procedures, banking apps, and payments (PayPal/cards), access and setup.
+## SPID, CIE, and online services
+Guided help with digital identity, public portals, online procedures, payments, and banking applications.
 
-## Account Security & Access Recovery
-Strong passwords, 2FA, password managers, account recovery, securing accounts after suspicious access, and scam prevention.
+## Accounts, security, and backups
+Access recovery, password managers, 2FA, protection after suspicious activity, and scam prevention.
 
-## Privacy & Advanced Security (legal use)
-File/backup encryption, privacy-focused device and browser setup, reduced tracking, and practical data-protection configurations.
+## Lessons and everyday support
+Tailored lessons for adults and seniors covering smartphones, computers, email, photos, files, and safety.
 
-## Multimedia & Documents
-PDF work, scanning, format conversion, basic layout, and print/archiving-ready files.
+---
+
+# For local businesses
 
 ## Video Editing
-Editing for reels/shorts, cuts, subtitles, optimized exports, and content for local businesses.
+Reels, short videos, subtitles, clean cuts, and exports optimized for social media.
 
-## Basic Websites
-Simple showcase websites (one-page or a few pages), WhatsApp contact, map, domain/hosting setup, essential updates.
+## Essential websites
+Fast showcase websites with contacts, maps, domains, and information customers actually need.
 
-## 1-to-1 Training (Adults & Seniors)
-Practical lessons for computer/tablet/smartphone: WhatsApp, email, photos, files, useful apps, and everyday digital safety.
+## Documents and content
+PDFs, scanning, layouts, conversions, and organized digital material ready to share.

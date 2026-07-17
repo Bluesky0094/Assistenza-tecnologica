@@ -5,26 +5,27 @@ Contatto rapido: WhatsApp **+39 351 421 8212** · Email **assistenza.tecnologica
 
 ---
 
-## Assistenza Tecnologica (Dispositivi & Backup)
-PC, smartphone, tablet, stampanti e rete domestica: configurazione, problemi, ottimizzazioni, migrazione dati e backup.
+## PC, smartphone, Wi-Fi e stampanti
+Configurazione, problemi software, lentezza, aggiornamenti, rete domestica, trasferimento dati e backup.
 
-## Burocrazia Online & Pagamenti (SPID, INPS, PagoPA, Banking)
-Supporto guidato per SPID/CIE, portali della PA, pratiche online, app bancarie e pagamenti (PayPal/carte), accessi e configurazioni.
+## SPID, CIE e servizi online
+Supporto guidato per identità digitale, portali pubblici, pratiche, pagamenti e applicazioni bancarie.
 
-## Sicurezza Account & Recupero Accessi
-Password sicure, 2FA, password manager, recupero account, messa in sicurezza dopo accessi sospetti e prevenzione truffe.
+## Account, sicurezza e backup
+Recupero accessi, password manager, 2FA, protezione dopo attività sospette e prevenzione delle truffe.
 
-## Privacy & Sicurezza Avanzata (uso lecito)
-Crittografia di file/backup, setup privacy su dispositivi e browser, riduzione tracciamento e configurazioni orientate alla protezione dei dati.
+## Lezioni e supporto quotidiano
+Lezioni personalizzate per adulti e anziani su smartphone, computer, email, foto, file e sicurezza.
 
-## Multimedia & Documenti
-PDF, scansioni, conversioni formati, impaginazione base e preparazione file per stampa/archiviazione.
+---
+
+# Per attività locali
 
 ## Video Editing
-Montaggio video (reels/shorts), tagli, sottotitoli, ottimizzazione export e contenuti per attività locali.
+Reel, video brevi, sottotitoli, tagli ed esportazioni ottimizzate per i social.
 
-## Siti Web Base
-Siti vetrina (one-page o poche pagine), contatti WhatsApp, mappa, dominio/hosting, aggiornamenti essenziali.
+## Siti web essenziali
+Siti vetrina veloci con contatti, mappa, dominio e informazioni davvero utili ai clienti.
 
-## Lezioni Personalizzate (Adulti & Anziani)
-Lezioni pratiche su computer/tablet/smartphone: WhatsApp, email, foto, file, app utili e sicurezza quotidiana.
+## Documenti e contenuti
+PDF, scansioni, impaginazioni, conversioni e materiali digitali ordinati e pronti da condividere.

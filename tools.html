@@ -3,25 +3,28 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Strumenti utili - Assistenza Tecnologica" />
-    <title>Strumenti | Assistenza Tecnologica</title>
+    <meta name="description" content="Strumenti gratuiti nel browser: password e passphrase con casualità crittografica, controllo password e QR locali." />
+    <title>Strumenti gratuiti e privati | Assistenza Tecnologica</title>
+    <link rel="canonical" href="https://bluesky0094.github.io/Assistenza-tecnologica/tools.html" />
     <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
     <link rel="alternate icon" href="assets/img/favicon.ico" type="image/x-icon" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Strumenti | Assistenza Tecnologica" />
-    <meta property="og:description" content="Strumenti utili - Assistenza Tecnologica" />
+    <meta property="og:description" content="Password, passphrase, controllo sicurezza e QR: strumenti gratuiti che funzionano nel browser." />
+    <meta property="og:url" content="https://bluesky0094.github.io/Assistenza-tecnologica/tools.html" />
     <meta property="og:image" content="assets/img/social-preview.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Strumenti | Assistenza Tecnologica" />
-    <meta name="twitter:description" content="Strumenti utili - Assistenza Tecnologica" />
+    <meta name="twitter:description" content="Password, passphrase, controllo sicurezza e QR: strumenti gratuiti che funzionano nel browser." />
     <meta name="twitter:image" content="assets/img/social-preview.png" />
     <link rel="stylesheet" href="assets/css/styles.css" />
     <script src="assets/js/main_it.js" defer></script>
     <script src="assets/js/main_en.js" defer></script>
     <script src="assets/js/main.js" defer></script>
     <script src="assets/js/wordlist.js" defer></script>
+    <script src="assets/js/vendor/qrcode.js" defer></script>
     <script src="assets/js/tools.js" defer></script>
   </head>
   <body>
@@ -40,10 +43,13 @@
           <span class="menu-icon" aria-hidden="true"><span></span></span>
           <span class="menu-label" data-i18n="nav_menu">Menu</span>
         </button>
-        <nav class="site-nav" id="primary-nav" aria-label="Primary">
+        <nav class="site-nav" id="primary-nav" aria-label="Navigazione principale" data-i18n-attr="aria-label:nav_label">
           <a class="nav-link" href="index.html#hero" data-i18n="nav_home">Home</a>
+          <a class="nav-link" href="index.html#services" data-i18n="nav_services">Servizi</a>
+          <a class="nav-link" href="index.html#how-it-works" data-i18n="nav_how">Come funziona</a>
           <a class="nav-link" href="about.html" data-i18n="nav_about">Chi sono</a>
-          <a class="nav-link" href="tools.html" data-i18n="nav_tools" aria-current="page">Strumenti</a>
+          <a class="nav-link" href="tools.html" data-i18n="nav_tools" aria-current="page">Strumenti gratuiti</a>
+          <a class="nav-link nav-link--cta" href="#contact" data-i18n="nav_contact">WhatsApp</a>
         </nav>
       </div>
     </header>
@@ -53,9 +59,12 @@
         <div class="container">
           <div class="section-heading">
             <p class="eyebrow" data-i18n="tools_eyebrow">Strumenti</p>
-            <h1 data-i18n="tools_title">Generatori password, username e QR</h1>
+            <h1 data-i18n="tools_title">Password, passphrase, controllo sicurezza e QR</h1>
             <p class="section-subtitle" data-i18n="tools_subtitle">
-              Crea credenziali sicure, nomi utente puliti e codici QR in pochi secondi.
+              Crea credenziali con casualità crittografica, controlla password e genera QR direttamente nel browser.
+            </p>
+            <p class="privacy-note" data-i18n="tools_privacy_note">
+              Questi strumenti funzionano sul tuo dispositivo. Password e contenuti QR non vengono inviati al mio sito o a servizi esterni.
             </p>
           </div>
 
@@ -207,7 +216,7 @@
             <div class="tool-row">
               <h2 class="tool-title" data-i18n="checker_title">Controllo password</h2>
               <p class="tool-hint" data-i18n="checker_subtitle">
-                Verifica la robustezza di una password e ricevi consigli pratici.
+                Verifica la struttura localmente. Per prudenza, non incollare una password che usi davvero.
               </p>
             </div>
 
@@ -245,7 +254,7 @@
             <div class="tool-row">
               <h2 class="tool-title" data-i18n="qr_title">Generatore QR Code</h2>
               <p class="tool-hint" data-i18n="qr_subtitle">
-                Inserisci un testo o link e genera subito il QR.
+                Inserisci un testo o link: il QR viene creato localmente nel browser.
               </p>
             </div>
 
@@ -325,8 +334,10 @@
         <div class="footer-nav">
           <p class="footer-label" data-i18n="footer_nav">Navigazione</p>
           <a class="footer-link" href="index.html#hero" data-i18n="footer_home">Home</a>
+          <a class="footer-link" href="index.html#services" data-i18n="footer_services">Servizi</a>
+          <a class="footer-link" href="index.html#business-services" data-i18n="footer_business">Per attività locali</a>
           <a class="footer-link" href="about.html" data-i18n="footer_about">Chi sono</a>
-          <a class="footer-link" href="tools.html" data-i18n="footer_tools">Strumenti</a>
+          <a class="footer-link" href="tools.html" data-i18n="footer_tools">Strumenti gratuiti</a>
           <a class="footer-link" href="#contact" data-i18n="footer_contact_link">Contatti</a>
         </div>
         <div class="footer-contact">
@@ -351,7 +362,3 @@
     </button>
   </body>
 </html>
-
-
-
-

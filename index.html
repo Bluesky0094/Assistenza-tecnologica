@@ -3,20 +3,37 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Sito servizi bilingue (IT/EN) + strumenti utili client-side" />
-    <title>Assistenza Tecnologica</title>
+    <meta name="description" content="Assistenza per PC, smartphone, Wi-Fi, SPID, account e servizi online a Modica e provincia di Ragusa, anche da remoto." />
+    <title>Assistenza Tecnologica a Modica | PC, smartphone, SPID e supporto remoto</title>
+    <link rel="canonical" href="https://bluesky0094.github.io/Assistenza-tecnologica/" />
     <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
     <link rel="alternate icon" href="assets/img/favicon.ico" type="image/x-icon" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Assistenza Tecnologica" />
-    <meta property="og:description" content="Sito servizi bilingue (IT/EN) + strumenti utili client-side" />
+    <meta property="og:description" content="Aiuto pratico per PC, smartphone, Wi-Fi, SPID e account a Modica, anche da remoto." />
+    <meta property="og:url" content="https://bluesky0094.github.io/Assistenza-tecnologica/" />
     <meta property="og:image" content="assets/img/social-preview.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Assistenza Tecnologica" />
-    <meta name="twitter:description" content="Sito servizi bilingue (IT/EN) + strumenti utili client-side" />
+    <meta name="twitter:description" content="Aiuto pratico per PC, smartphone, Wi-Fi, SPID e account a Modica, anche da remoto." />
     <meta name="twitter:image" content="assets/img/social-preview.png" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "Assistenza Tecnologica",
+        "url": "https://bluesky0094.github.io/Assistenza-tecnologica/",
+        "telephone": "+39 351 421 8212",
+        "email": "assistenza.tecnologica@proton.me",
+        "description": "Assistenza per PC, smartphone, Wi-Fi, SPID, account e servizi online, in presenza e da remoto.",
+        "address": {"@type": "PostalAddress", "addressLocality": "Modica", "addressRegion": "Ragusa", "addressCountry": "IT"},
+        "areaServed": ["Modica", "Provincia di Ragusa"],
+        "availableLanguage": ["it", "en"],
+        "serviceType": ["Assistenza informatica", "Supporto per servizi online", "Sicurezza account e backup", "Formazione digitale", "Video editing", "Siti web"]
+      }
+    </script>
     <link rel="stylesheet" href="assets/css/styles.css" />
     <script src="assets/js/main_it.js" defer></script>
     <script src="assets/js/main_en.js" defer></script>
@@ -38,10 +55,13 @@
           <span class="menu-icon" aria-hidden="true"><span></span></span>
           <span class="menu-label" data-i18n="nav_menu">Menu</span>
         </button>
-        <nav class="site-nav" id="primary-nav" aria-label="Primary">
+        <nav class="site-nav" id="primary-nav" aria-label="Navigazione principale" data-i18n-attr="aria-label:nav_label">
           <a class="nav-link" href="#hero" data-i18n="nav_home" aria-current="page">Home</a>
+          <a class="nav-link" href="#services" data-i18n="nav_services">Servizi</a>
+          <a class="nav-link" href="#how-it-works" data-i18n="nav_how">Come funziona</a>
           <a class="nav-link" href="about.html" data-i18n="nav_about">Chi sono</a>
-          <a class="nav-link" href="tools.html" data-i18n="nav_tools">Strumenti</a>
+          <a class="nav-link" href="tools.html" data-i18n="nav_tools">Strumenti gratuiti</a>
+          <a class="nav-link nav-link--cta" href="#contact" data-i18n="nav_contact">WhatsApp</a>
         </nav>
       </div>
     </header>
@@ -50,10 +70,10 @@
       <section class="hero" id="hero">
         <div class="container hero-grid">
           <div class="hero-copy">
-            <p class="eyebrow" data-i18n="hero_eyebrow">Supporto tecnico e digitale</p>
-            <h1 data-i18n="hero_title">Risolvo problemi tecnologici, senza stress.</h1>
+            <p class="eyebrow" data-i18n="hero_eyebrow">Assistenza tecnologica a Modica</p>
+            <h1 data-i18n="hero_title">La tecnologia torna semplice.</h1>
             <p class="hero-subtitle" data-i18n="hero_subtitle">
-              Interventi rapidi in presenza a Modica e provincia di Ragusa, oppure da remoto ovunque.
+              Risolvo problemi con PC, smartphone, Wi-Fi, account e servizi online, a domicilio o da remoto.
             </p>
             <div class="hero-actions">
               <a
@@ -64,23 +84,32 @@
               >
                 Scrivimi su WhatsApp
               </a>
-              <span class="cta-note" data-i18n="hero_cta_note">Risposta veloce, zero impegno.</span>
+              <span class="cta-note" data-i18n="hero_cta_note">Prima capiamo il problema, poi concordiamo l'intervento.</span>
             </div>
           </div>
           <div class="hero-panel">
             <div class="panel-card">
-              <h2 class="panel-title" data-i18n="hero_panel_title">Come posso aiutarti</h2>
+              <p class="panel-kicker" data-i18n="hero_panel_kicker">Un aiuto personale</p>
+              <h2 class="panel-title" data-i18n="hero_panel_title">Sono Stefano.</h2>
+              <p class="panel-intro" data-i18n="hero_panel_intro">Ti seguo direttamente, senza call center e senza tecnicismi inutili.</p>
               <ul class="panel-list">
-                <li data-i18n="hero_panel_item1">Assistenza per casa e ufficio</li>
-                <li data-i18n="hero_panel_item2">Configurazioni sicure e pulite</li>
-                <li data-i18n="hero_panel_item3">Supporto remoto o in presenza</li>
+                <li data-i18n="hero_panel_item1">Modica e provincia di Ragusa</li>
+                <li data-i18n="hero_panel_item2">A domicilio e da remoto</li>
+                <li data-i18n="hero_panel_item3">Costi chiari prima di iniziare</li>
               </ul>
             </div>
           </div>
         </div>
       </section>
 
-      <div class="section-divider" aria-hidden="true"></div>
+      <section class="trust-strip" aria-label="Punti di fiducia" data-i18n-attr="aria-label:trust_label">
+        <div class="container trust-grid">
+          <p><strong data-i18n="trust_1_title">Locale</strong><span data-i18n="trust_1_body">Modica e provincia di Ragusa</span></p>
+          <p><strong data-i18n="trust_2_title">Flessibile</strong><span data-i18n="trust_2_body">In presenza oppure da remoto</span></p>
+          <p><strong data-i18n="trust_3_title">Trasparente</strong><span data-i18n="trust_3_body">Intervento concordato prima</span></p>
+          <p><strong data-i18n="trust_4_title">Riservato</strong><span data-i18n="trust_4_body">Attenzione concreta ai tuoi dati</span></p>
+        </div>
+      </section>
 
       <section class="how-it-works" id="how-it-works">
         <div class="container">
@@ -140,67 +169,60 @@
         <div class="container">
           <div class="section-heading">
             <p class="eyebrow" data-i18n="services_eyebrow">Servizi</p>
-            <h2 data-i18n="services_title">Tutto l'aiuto, in un unico posto</h2>
+            <h2 data-i18n="services_title">Aiuto pratico, per problemi reali.</h2>
             <p class="section-subtitle" data-i18n="services_subtitle">
-              Assistenza a domicilio e da remoto, per casa, ufficio e burocrazia digitale.
+              Quattro aree chiare per casa, lavoro e vita digitale.
             </p>
           </div>
           <div class="services-grid">
             <article class="service-card">
-              <h3 data-i18n="service_1_title">Assistenza Tecnologica (Dispositivi &amp; Backup)</h3>
+              <span class="service-number">01</span>
+              <h3 data-i18n="service_1_title">PC, smartphone, Wi-Fi e stampanti</h3>
               <p data-i18n="service_1_body">
-                PC, smartphone, tablet, stampanti e rete domestica: configurazione, problemi, ottimizzazioni, migrazione
-                dati e backup.
+                Configurazione, problemi software, lentezza, aggiornamenti, rete domestica, trasferimento dati e backup.
               </p>
+              <a class="service-link" data-i18n="service_1_cta" data-i18n-attr="href:service_1_whatsapp" href="#contact">Chiedi aiuto per un dispositivo ↗</a>
             </article>
             <article class="service-card">
-              <h3 data-i18n="service_2_title">Burocrazia Online &amp; Pagamenti (SPID, INPS, PagoPA, Banking)</h3>
+              <span class="service-number">02</span>
+              <h3 data-i18n="service_2_title">SPID, CIE e servizi online</h3>
               <p data-i18n="service_2_body">
-                Supporto guidato per SPID/CIE, portali della PA, pratiche online, app bancarie e pagamenti
-                (PayPal/carte), accessi e configurazioni.
+                Supporto guidato per identità digitale, portali pubblici, pratiche, pagamenti e applicazioni bancarie.
               </p>
+              <a class="service-link" data-i18n="service_2_cta" data-i18n-attr="href:service_2_whatsapp" href="#contact">Chiedi aiuto per una pratica ↗</a>
             </article>
             <article class="service-card">
-              <h3 data-i18n="service_3_title">Sicurezza Account &amp; Recupero Accessi</h3>
+              <span class="service-number">03</span>
+              <h3 data-i18n="service_3_title">Account, sicurezza e backup</h3>
               <p data-i18n="service_3_body">
-                Password sicure, 2FA, password manager, recupero account, messa in sicurezza dopo accessi sospetti e
-                prevenzione truffe.
+                Recupero accessi, password manager, 2FA, protezione dopo attività sospette e prevenzione delle truffe.
               </p>
+              <a class="service-link" data-i18n="service_3_cta" data-i18n-attr="href:service_3_whatsapp" href="#contact">Metti in sicurezza un account ↗</a>
             </article>
             <article class="service-card">
-              <h3 data-i18n="service_4_title">Privacy &amp; Sicurezza Avanzata (uso lecito)</h3>
+              <span class="service-number">04</span>
+              <h3 data-i18n="service_4_title">Lezioni e supporto quotidiano</h3>
               <p data-i18n="service_4_body">
-                Crittografia di file/backup, setup privacy su dispositivi e browser, riduzione tracciamento e
-                configurazioni orientate alla protezione dei dati.
+                Lezioni personalizzate per adulti e anziani su smartphone, computer, email, foto, file e sicurezza.
               </p>
+              <a class="service-link" data-i18n="service_4_cta" data-i18n-attr="href:service_4_whatsapp" href="#contact">Organizza una lezione ↗</a>
             </article>
-            <article class="service-card">
-              <h3 data-i18n="service_5_title">Multimedia &amp; Documenti</h3>
-              <p data-i18n="service_5_body">
-                PDF, scansioni, conversioni formati, impaginazione base e preparazione file per stampa/archiviazione.
-              </p>
-            </article>
-            <article class="service-card">
-              <h3 data-i18n="service_6_title">Video Editing</h3>
-              <p data-i18n="service_6_body">
-                Montaggio video (reels/shorts), tagli, sottotitoli, ottimizzazione export e contenuti per attività
-                locali.
-              </p>
-            </article>
-            <article class="service-card">
-              <h3 data-i18n="service_7_title">Siti Web Base</h3>
-              <p data-i18n="service_7_body">
-                Siti vetrina (one-page o poche pagine), contatti WhatsApp, mappa, dominio/hosting, aggiornamenti
-                essenziali.
-              </p>
-            </article>
-            <article class="service-card">
-              <h3 data-i18n="service_8_title">Lezioni Personalizzate (Adulti &amp; Anziani)</h3>
-              <p data-i18n="service_8_body">
-                Lezioni pratiche su computer/tablet/smartphone: WhatsApp, email, foto, file, app utili e sicurezza
-                quotidiana.
-              </p>
-            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="business-services" id="business-services">
+        <div class="container business-layout">
+          <div class="business-heading">
+            <p class="eyebrow" data-i18n="business_eyebrow">Per attività locali</p>
+            <h2 data-i18n="business_title">Quando serve anche comunicare meglio.</h2>
+            <p data-i18n="business_subtitle">Servizi digitali essenziali per presentare la tua attività con ordine, chiarezza e contenuti pronti all'uso.</p>
+            <a class="btn btn-secondary" data-i18n="business_cta" data-i18n-attr="href:business_whatsapp" href="#contact">Parliamo della tua attività</a>
+          </div>
+          <div class="business-list">
+            <article><span>01</span><div><h3 data-i18n="service_6_title">Video editing</h3><p data-i18n="service_6_body">Reel, video brevi, sottotitoli, tagli ed esportazioni ottimizzate per i social.</p></div></article>
+            <article><span>02</span><div><h3 data-i18n="service_7_title">Siti web essenziali</h3><p data-i18n="service_7_body">Siti vetrina veloci con contatti, mappa, dominio e informazioni davvero utili ai clienti.</p></div></article>
+            <article><span>03</span><div><h3 data-i18n="service_5_title">Documenti e contenuti</h3><p data-i18n="service_5_body">PDF, scansioni, impaginazioni, conversioni e materiali digitali ordinati e pronti da condividere.</p></div></article>
           </div>
         </div>
       </section>
@@ -264,9 +286,9 @@
               </p>
             </details>
             <details class="faq-item">
-              <summary data-i18n="faq_q9">Posso richiedere un sito web semplice?</summary>
+              <summary data-i18n="faq_q9">Realizzi anche video e siti per attività locali?</summary>
               <p data-i18n="faq_a9">
-                Si, realizzo siti vetrina essenziali con contatti e informazioni principali.
+                Sì, realizzo video brevi, contenuti e siti vetrina essenziali pensati per attività locali.
               </p>
             </details>
           </div>
@@ -308,8 +330,9 @@
           <a class="footer-link" href="#hero" data-i18n="footer_home">Home</a>
           <a class="footer-link" href="#how-it-works" data-i18n="footer_how">Come funziona</a>
           <a class="footer-link" href="#services" data-i18n="footer_services">Servizi</a>
+          <a class="footer-link" href="#business-services" data-i18n="footer_business">Per attività locali</a>
           <a class="footer-link" href="about.html" data-i18n="footer_about">Chi sono</a>
-          <a class="footer-link" href="tools.html" data-i18n="footer_tools">Strumenti</a>
+          <a class="footer-link" href="tools.html" data-i18n="footer_tools">Strumenti gratuiti</a>
           <a class="footer-link" href="#contact" data-i18n="footer_contact_link">Contatti</a>
         </div>
         <div class="footer-contact">
