@@ -94,3 +94,4 @@ When a decision is made (e.g., change bilingual strategy), note it briefly here:
 - 2026-02-20: `tools.html` is official in current scope; markdown files are canonical source for services/about wording.
 - 2026-07-17: Practical local tech assistance is the primary offer; video, web, and document services are grouped separately for local businesses.
 - 2026-07-17: Credential generation uses browser cryptographic randomness and QR generation is vendored locally so tool inputs are not sent to third parties.
+- 2026-07-18: The visual system uses a dark security-oriented theme with blue accents across Home, About, and Tools.
